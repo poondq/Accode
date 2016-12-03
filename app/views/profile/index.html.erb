@@ -1,0 +1,43 @@
+PROFILE
+
+<div> logo | <a href="/">Dashboard</a> | <a href="/transaction">Transaction</a> | <a href="/profile">Profile</a> | <a href="/setting">Setting</a> </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div>
+<%= current_user.merchant_avatar %> <br>
+<%= current_user.merchant_id %> <br>
+<%= current_user.merchant_address %> <br>
+<%= current_user.merchant_amount %> <br>
+<%= current_user.merchant_status%> <br>
+
+</div>	
+<%= form_for @edit, :url => { :controller => 'setting', :action => 'update', :id => @edit } do |f| %>
+ <%= f.label :merchant_avatar, "Image" %> <br>
+ <%= f.text_field :merchant_avatar %> <br>
+ <%= f.label :merchant_id, "Name" %> <br>
+ <%= f.text_field :merchant_id %> <br>
+ <%= f.label :merchant_address, "Address" %>	<br>
+ <%= f.text_field :merchant_address %>	<br>
+ <%= f.label :merchant_amount, "Amount" %>	<br>
+ <%= f.text_area :merchant_amount %>	<br>
+ <%= f.label :merchant_status, "Status" %>	<br>
+ <%= f.text_area :merchant_status %>	<br>
+ <%= f.submit "Update" %>	<br>
+<% end %>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div>
+footer
+Peerex 2016
+</div>

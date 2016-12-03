@@ -1,0 +1,46 @@
+DASHBOARD  <%= current_user.merchant_id %> |  <%= link_to('Log Out', destroy_user_session_path, :method => :delete) %> | 
+
+
+
+<div> logo | <a href="/">Dashboard</a> | <a href="/transaction">Transaction</a> | <a href="/profile">Profile</a> | <a href="/setting">Setting</a> </div><br><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div> 
+<div>Status | <%= current_user.merchant_status %> </div>
+<div>Merchant Name | <%= current_user.merchant_id %> </div>
+<div>Address | <%= current_user.merchant_address %> </div>
+<div>Available Amount | <%= current_user.merchant_amount %> </div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<b> TO -BE COMPLETED</b>
+<div> 
+Upcoming Transaction <br>
+Image  | Name   | Amt | Transaction Ref | Date <br>
+Avatar | Joseph | $50 | Transaction Ref | 25.12.2016
+<%= @traveller.traveller_name %>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div>
+footer
+Peerex 2016
+</div>
