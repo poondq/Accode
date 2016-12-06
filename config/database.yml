@@ -24,4 +24,4 @@ production:
   <<: *default
   database: peerex_production
   username: peerex_sample
-  password: <%= ENV['password'] %>
+  password: <%= ENV['PEEREX_DATABASE_PASSWORD'] %>
