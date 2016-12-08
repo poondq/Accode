@@ -2,8 +2,7 @@ class MerchantsController < ApplicationController
 	def index
 
 		if params[:request_amount].present? || params[:request_zone].present?
-			 @user = User.where("merchant_amount > ?", params[:request_amount].to_i)
-
+			 @user = User.where("merchant_amount > ?", params[:request_amount])
 		else
 			@user = User.all
 		end
