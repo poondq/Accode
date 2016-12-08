@@ -8504,3 +8504,2486 @@ Completed 200 OK in 12758ms (Views: 12735.6ms | ActiveRecord: 3.5ms)
 Completed 200 OK in 7147ms (Views: 7135.6ms | ActiveRecord: 2.4ms)
 
 
+Started GET "/" for ::1 at 2016-12-08 17:10:29 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/index.html.erb within layouts/application
+  [1m[36mTraveller Load (0.5ms)[0m  [1m[34mSELECT "travellers".* FROM "travellers"[0m
+  Rendered dashboard/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 416ms (Views: 372.8ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/merchants" for ::1 at 2016-12-08 17:10:34 +0800
+Processing by MerchantsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants/1" for ::1 at 2016-12-08 17:10:40 +0800
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 4ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=id):
+  
+app/controllers/merchants_controller.rb:8:in `show'
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.4ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (65.4ms)
+Started GET "/merchants" for ::1 at 2016-12-08 17:11:23 +0800
+Processing by MerchantsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-12-08 17:11:25 +0800
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/index.html.erb within layouts/application
+  [1m[36mTraveller Load (0.3ms)[0m  [1m[34mSELECT "travellers".* FROM "travellers"[0m
+  Rendered dashboard/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 94ms (Views: 88.0ms | ActiveRecord: 1.1ms)
+
+
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/merchants" for ::1 at 2016-12-08 17:14:25 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MerchantsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 34ms (Views: 0.2ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/" for ::1 at 2016-12-08 17:14:26 +0800
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/index.html.erb within layouts/application
+  [1m[36mTraveller Load (0.4ms)[0m  [1m[34mSELECT "travellers".* FROM "travellers"[0m
+  Rendered dashboard/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 427ms (Views: 413.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/merchants?id=1" for ::1 at 2016-12-08 17:14:31 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants" for ::1 at 2016-12-08 17:14:45 +0800
+Processing by MerchantsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/merchants/1" for ::1 at 2016-12-08 17:14:47 +0800
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 6ms (Views: 0.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/merchants" for ::1 at 2016-12-08 17:15:00 +0800
+Processing by MerchantsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants/1" for ::1 at 2016-12-08 17:15:02 +0800
+Processing by MerchantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/merchants" for ::1 at 2016-12-08 17:15:54 +0800
+Processing by MerchantsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/merchants?id=1" for ::1 at 2016-12-08 17:16:09 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-12-08 17:16:20 +0800
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/index.html.erb within layouts/application
+  [1m[36mTraveller Load (0.4ms)[0m  [1m[34mSELECT "travellers".* FROM "travellers"[0m
+  Rendered dashboard/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 88ms (Views: 82.4ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-12-08 17:16:23 +0800
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"leQCTUQPy6aeQ9NcqwH2aAs3xK3nG/KZnY8joJ/QJ94s6SAt2Lbq7wRpyNFROoMzqJoNZpYHPzJP7yVd27ETXQ=="}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 19ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2016-12-08 17:16:23 +0800
+Processing by DashboardController#index as HTML
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-12-08 17:16:23 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (23.5ms)
+Completed 200 OK in 109ms (Views: 106.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-12-08 17:16:25 +0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 113ms (Views: 110.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2016-12-08 17:16:31 +0800
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7dD1d9Xg2qfofuswovLY+EoQFH7U5UdORpHegjsz41yF0priwWP7WAcmGkn7DfRlOP8ArnXOXw70sl5o6rk8ow==", "user"=>{"email"=>"poondq2@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "poondq2@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (6.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "poondq2@gmail.com"], ["encrypted_password", "$2a$11$3FrW6pYyrnQhNAuhC38u9O8ogG5TuMtca6ivPe1g23kxOEsAwZvmC"], ["created_at", 2016-12-08 09:16:31 UTC], ["updated_at", 2016-12-08 09:16:31 UTC]]
+  [1m[35m (12.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "current_sign_in_ip" = $4, "last_sign_in_ip" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["sign_in_count", 1], ["current_sign_in_at", 2016-12-08 09:16:31 UTC], ["last_sign_in_at", 2016-12-08 09:16:31 UTC], ["current_sign_in_ip", "::1"], ["last_sign_in_ip", "::1"], ["updated_at", 2016-12-08 09:16:31 UTC], ["id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 198ms (ActiveRecord: 21.2ms)
+
+
+Started GET "/" for ::1 at 2016-12-08 17:16:31 +0800
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering dashboard/index.html.erb within layouts/application
+  [1m[36mTraveller Load (0.3ms)[0m  [1m[34mSELECT "travellers".* FROM "travellers"[0m
+  Rendered dashboard/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 53ms (Views: 49.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/merchants?id=1" for ::1 at 2016-12-08 17:16:38 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/merchants/1" for ::1 at 2016-12-08 17:17:01 +0800
+Processing by MerchantsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/merchants/2" for ::1 at 2016-12-08 17:17:04 +0800
+Processing by MerchantsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/merchants?id=1" for ::1 at 2016-12-08 17:20:54 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants/1" for ::1 at 2016-12-08 17:23:51 +0800
+Processing by MerchantsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 13ms (Views: 4.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/merchants/2" for ::1 at 2016-12-08 17:25:19 +0800
+Processing by MerchantsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 35ms (Views: 1.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants/1" for ::1 at 2016-12-08 17:25:21 +0800
+Processing by MerchantsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/merchants/2" for ::1 at 2016-12-08 17:25:26 +0800
+Processing by MerchantsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/merchants/1" for ::1 at 2016-12-08 17:25:40 +0800
+Processing by MerchantsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants/2" for ::1 at 2016-12-08 17:25:41 +0800
+Processing by MerchantsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/merchants/1" for ::1 at 2016-12-08 17:25:46 +0800
+Processing by MerchantsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants" for ::1 at 2016-12-08 18:01:16 +0800
+Processing by MerchantsController#index as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 28ms (Views: 0.4ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/" for ::1 at 2016-12-08 18:01:23 +0800
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering dashboard/index.html.erb within layouts/application
+  [1m[36mTraveller Load (0.5ms)[0m  [1m[34mSELECT "travellers".* FROM "travellers"[0m
+  Rendered dashboard/index.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 106ms (Views: 86.5ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/setting" for ::1 at 2016-12-08 18:01:27 +0800
+Processing by SettingController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering setting/index.html.erb within layouts/application
+  Rendered setting/index.html.erb within layouts/application (22.2ms)
+Completed 200 OK in 105ms (Views: 99.0ms | ActiveRecord: 0.9ms)
+
+
+Started PATCH "/setting/2" for ::1 at 2016-12-08 18:01:34 +0800
+Processing by SettingController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pYb+yBKxaDhz2lPIXAzY2kw4YXv0LlHWK5du16J2Vph+gx9qDNDK65hQTkRnJCcQZ+ACAs287vNF39CjAby6Gg==", "user"=>{"merchant_avatar"=>"", "merchant_id"=>"", "merchant_address"=>"", "merchant_amount"=>"1000", "merchant_status"=>""}, "commit"=>"Update", "id"=>"2"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[33mUPDATE "users" SET "merchant_avatar" = $1, "merchant_id" = $2, "merchant_address" = $3, "merchant_amount" = $4, "merchant_status" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["merchant_avatar", ""], ["merchant_id", ""], ["merchant_address", ""], ["merchant_amount", "1000"], ["merchant_status", ""], ["updated_at", 2016-12-08 10:01:34 UTC], ["id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/setting?id=2
+Completed 302 Found in 12ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/setting?id=2" for ::1 at 2016-12-08 18:01:34 +0800
+Processing by SettingController#index as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering setting/index.html.erb within layouts/application
+  Rendered setting/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 67ms (Views: 64.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/merchants" for ::1 at 2016-12-08 18:01:44 +0800
+Processing by MerchantsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/merchants?request_amount=20" for ::1 at 2016-12-08 18:01:54 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"20"}
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '20')[0m
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/merchants?request_amount=20" for ::1 at 2016-12-08 18:01:56 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"20"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '20')[0m
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/merchants?request_amount=20" for ::1 at 2016-12-08 18:02:07 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"20"}
+  [1m[36mUser Load (12.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount < '20')[0m
+Completed 200 OK in 29ms (Views: 0.1ms | ActiveRecord: 12.6ms)
+
+
+Started GET "/merchants?request_amount=20" for ::1 at 2016-12-08 18:02:09 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"20"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount < '20')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/merchants?request_amount=50" for ::1 at 2016-12-08 18:02:27 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"50"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount < '50')[0m
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/merchants?request_amount=5999" for ::1 at 2016-12-08 18:02:35 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"5999"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount < '5999')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants" for ::1 at 2016-12-08 18:02:44 +0800
+Processing by MerchantsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=10" for ::1 at 2016-12-08 18:04:01 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"10"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '10')[0m
+Completed 200 OK in 25ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=10" for ::1 at 2016-12-08 18:04:02 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"10"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '10')[0m
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=10000" for ::1 at 2016-12-08 18:04:06 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"10000"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '10000')[0m
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/merchants?request_amount=1001" for ::1 at 2016-12-08 18:04:12 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"1001"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '1001')[0m
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=1001" for ::1 at 2016-12-08 18:04:26 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"1001"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '1001')[0m
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=1000" for ::1 at 2016-12-08 18:04:29 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"1000"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '1000')[0m
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/merchants?request_amount=999" for ::1 at 2016-12-08 18:04:33 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"999"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '999')[0m
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=100" for ::1 at 2016-12-08 18:04:36 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"100"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '100')[0m
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/merchants?request_amount=500" for ::1 at 2016-12-08 18:04:41 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"500"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '500')[0m
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/merchants?request_amount=200" for ::1 at 2016-12-08 18:04:43 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"200"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '200')[0m
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=101" for ::1 at 2016-12-08 18:04:46 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"101"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '101')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/merchants?request_amount=11" for ::1 at 2016-12-08 18:04:47 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"11"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '11')[0m
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/merchants?request_amount=1" for ::1 at 2016-12-08 18:04:49 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '1')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=2" for ::1 at 2016-12-08 18:04:50 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '2')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/merchants?request_amount=2" for ::1 at 2016-12-08 18:04:51 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '2')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=2" for ::1 at 2016-12-08 18:04:52 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '2')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=2" for ::1 at 2016-12-08 18:04:52 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '2')[0m
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=2" for ::1 at 2016-12-08 18:04:52 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '2')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=2" for ::1 at 2016-12-08 18:04:52 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '2')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=3" for ::1 at 2016-12-08 18:04:53 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '3')[0m
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=3" for ::1 at 2016-12-08 18:04:53 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '3')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=3" for ::1 at 2016-12-08 18:04:54 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '3')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=3" for ::1 at 2016-12-08 18:04:54 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '3')[0m
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/merchants?request_amount=3" for ::1 at 2016-12-08 18:05:18 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount >= '3')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/merchants?request_amount=3" for ::1 at 2016-12-08 18:05:19 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount >= '3')[0m
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/merchants?request_amount=1" for ::1 at 2016-12-08 18:05:20 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount >= '1')[0m
+Completed 200 OK in 17ms (Views: 0.1ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/merchants?request_amount=2" for ::1 at 2016-12-08 18:05:22 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount >= '2')[0m
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=1" for ::1 at 2016-12-08 18:05:23 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount >= '1')[0m
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/merchants?request_amount=500" for ::1 at 2016-12-08 18:05:28 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"500"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount >= '500')[0m
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=504" for ::1 at 2016-12-08 18:05:30 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"504"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount >= '504')[0m
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=504" for ::1 at 2016-12-08 18:06:45 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"504"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '504' )[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=1" for ::1 at 2016-12-08 18:06:48 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '1' )[0m
+Completed 200 OK in 20ms (Views: 0.1ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/merchants?request_amount=2" for ::1 at 2016-12-08 18:06:49 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '2' )[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/merchants?request_amount=3" for ::1 at 2016-12-08 18:06:51 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '3' )[0m
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=4" for ::1 at 2016-12-08 18:06:52 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '4' )[0m
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=4" for ::1 at 2016-12-08 18:06:53 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '4' )[0m
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=6" for ::1 at 2016-12-08 18:06:54 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '6' )[0m
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=10" for ::1 at 2016-12-08 18:06:56 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"10"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '10' )[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=100" for ::1 at 2016-12-08 18:07:00 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"100"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '100' )[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=1000" for ::1 at 2016-12-08 18:07:01 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"1000"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '1000' )[0m
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=10000" for ::1 at 2016-12-08 18:07:03 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"10000"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '10000' )[0m
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=10000" for ::1 at 2016-12-08 18:07:04 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"10000"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '10000' )[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=200" for ::1 at 2016-12-08 18:07:06 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"200"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '200' )[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/merchants?request_amount=30" for ::1 at 2016-12-08 18:07:08 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"30"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '30' )[0m
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=1" for ::1 at 2016-12-08 18:07:10 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '1' )[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=1" for ::1 at 2016-12-08 18:10:04 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '1')[0m
+Completed 200 OK in 20ms (Views: 0.2ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/merchants?request_amount=100" for ::1 at 2016-12-08 18:10:07 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"100"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '100')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/merchants?request_amount=2" for ::1 at 2016-12-08 18:10:13 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '2')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/merchants?request_amount=3" for ::1 at 2016-12-08 18:10:16 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '3')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=4" for ::1 at 2016-12-08 18:10:18 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '4')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=5" for ::1 at 2016-12-08 18:10:21 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '5')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=1" for ::1 at 2016-12-08 18:10:36 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '1')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=2" for ::1 at 2016-12-08 18:10:44 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '2')[0m
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/merchants?request_amount=3" for ::1 at 2016-12-08 18:10:47 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '3')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=9" for ::1 at 2016-12-08 18:10:49 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"9"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '9')[0m
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/merchants?request_amount=100" for ::1 at 2016-12-08 18:10:52 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"100"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '100')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=200" for ::1 at 2016-12-08 18:10:55 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"200"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '200')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/merchants?request_amount=300" for ::1 at 2016-12-08 18:11:00 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"300"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '300')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=300" for ::1 at 2016-12-08 18:11:20 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"300"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '300')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/merchants?request_amount=1" for ::1 at 2016-12-08 18:11:24 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '1')[0m
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=2" for ::1 at 2016-12-08 18:11:32 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"2"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '2')[0m
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/merchants?request_amount=3" for ::1 at 2016-12-08 18:11:35 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '3')[0m
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=100" for ::1 at 2016-12-08 18:11:37 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"100"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '100')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/merchants?request_amount=100" for ::1 at 2016-12-08 18:12:07 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"100"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '100')[0m
+Completed 200 OK in 19ms (Views: 0.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/merchants?request_amount=200" for ::1 at 2016-12-08 18:12:10 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"200"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '200')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=201" for ::1 at 2016-12-08 18:12:14 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"201"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '201')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=101" for ::1 at 2016-12-08 18:12:18 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"101"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '101')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=1" for ::1 at 2016-12-08 18:12:22 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '1')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=202" for ::1 at 2016-12-08 18:14:17 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"202"}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > request_amount)[0m
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 2.5ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column "request_amount" does not exist
+LINE 1: ...T "users".* FROM "users" WHERE (merchant_amount > request_am...
+                                                             ^
+: SELECT "users".* FROM "users" WHERE (merchant_amount > request_amount)):
+  
+app/controllers/merchants_controller.rb:14:in `index'
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.2ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (69.0ms)
+Started GET "/merchants?request_amount=101" for ::1 at 2016-12-08 18:14:29 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"101"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > request_amount)[0m
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 1.2ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column "request_amount" does not exist
+LINE 1: ...T "users".* FROM "users" WHERE (merchant_amount > request_am...
+                                                             ^
+: SELECT "users".* FROM "users" WHERE (merchant_amount > request_amount)):
+  
+app/controllers/merchants_controller.rb:14:in `index'
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.5ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (25.7ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (90.9ms)
+Started GET "/merchants?request_amount=101" for ::1 at 2016-12-08 18:14:44 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"101"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `present' for "101":String
+Did you mean?  present?
+               presence
+               presence_in
+               prepend):
+  
+app/controllers/merchants_controller.rb:7:in `index'
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.0ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (58.6ms)
+Started GET "/merchants?request_amount=101" for ::1 at 2016-12-08 18:15:43 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"101"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '101')[0m
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/merchants?request_amount=101" for ::1 at 2016-12-08 18:16:25 +0800
+  
+SyntaxError (/Users/poondq/projects/peerex3/app/controllers/merchants_controller.rb:25: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/merchants_controller.rb:25: syntax error, unexpected end-of-input, expecting keyword_end
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.2ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (62.4ms)
+Started GET "/merchants?request_amount=101" for ::1 at 2016-12-08 18:16:40 +0800
+  
+SyntaxError (/Users/poondq/projects/peerex3/app/controllers/merchants_controller.rb:25: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/merchants_controller.rb:25: syntax error, unexpected end-of-input, expecting keyword_end
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.5ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (57.5ms)
+Started GET "/merchants?request_amount=101" for ::1 at 2016-12-08 18:16:55 +0800
+  
+SyntaxError (/Users/poondq/projects/peerex3/app/controllers/merchants_controller.rb:26: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/merchants_controller.rb:26: syntax error, unexpected end-of-input, expecting keyword_end
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.5ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (60.5ms)
+Started GET "/merchants?request_amount=101" for ::1 at 2016-12-08 18:17:14 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"101"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '101')[0m
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/merchants?request_amount=200" for ::1 at 2016-12-08 18:17:18 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"200"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '200')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/merchants?request_amount=1" for ::1 at 2016-12-08 18:17:21 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '1')[0m
+Completed 200 OK in 19ms (Views: 0.1ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/merchants?request_amount=2" for ::1 at 2016-12-08 18:17:28 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '2')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=100" for ::1 at 2016-12-08 18:17:31 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"100"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '100')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=1000" for ::1 at 2016-12-08 18:17:31 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"1000"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '1000')[0m
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/merchants?request_amount=10" for ::1 at 2016-12-08 18:17:37 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"10"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '10')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/merchants?request_amount=200" for ::1 at 2016-12-08 18:17:41 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"200"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '200')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=321" for ::1 at 2016-12-08 18:18:05 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"321"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '321')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=202" for ::1 at 2016-12-08 18:18:13 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"202"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '202')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/merchants?request_amount=1" for ::1 at 2016-12-08 18:18:15 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '1')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=2" for ::1 at 2016-12-08 18:18:17 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '2')[0m
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=3" for ::1 at 2016-12-08 18:18:18 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '3')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/merchants?request_amount=4" for ::1 at 2016-12-08 18:18:19 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '4')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=5" for ::1 at 2016-12-08 18:18:20 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '5')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=6" for ::1 at 2016-12-08 18:18:21 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '6')[0m
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=10" for ::1 at 2016-12-08 18:18:22 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"10"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '10')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=200" for ::1 at 2016-12-08 18:18:41 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"200"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '200')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/merchants?request_amount=10" for ::1 at 2016-12-08 18:18:46 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"10"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '10')[0m
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/merchants?request_amount=22" for ::1 at 2016-12-08 18:19:01 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"22"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '22')[0m
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/merchants?request_am@user%20=%20User.where(%22merchant_amount%20%3E%20?%22,%20params[:request_amount]unt=22" for ::1 at 2016-12-08 18:20:41 +0800
+  
+SyntaxError (/Users/poondq/projects/peerex3/app/controllers/merchants_controller.rb:20: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/merchants_controller.rb:20: syntax error, unexpected end-of-input, expecting keyword_end
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.3ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (65.8ms)
+Started GET "/merchants?request_amount=1" for ::1 at 2016-12-08 18:22:02 +0800
+  
+SyntaxError (/Users/poondq/projects/peerex3/app/controllers/merchants_controller.rb:20: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/merchants_controller.rb:20: syntax error, unexpected end-of-input, expecting keyword_end
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.7ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (67.8ms)
+Started GET "/merchants?request_amount=1" for ::1 at 2016-12-08 18:22:25 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"1"}
+  [1m[36mUser Load (13.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > ?)[0m
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 13.7ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::SyntaxError: ERROR:  syntax error at or near ")"
+LINE 1: SELECT "users".* FROM "users" WHERE (merchant_amount > ?)
+                                                                ^
+: SELECT "users".* FROM "users" WHERE (merchant_amount > ?)):
+  
+app/controllers/merchants_controller.rb:14:in `index'
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.5ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (64.6ms)
+Started GET "/merchants?request_amount=200" for ::1 at 2016-12-08 18:22:44 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"200"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > ?)[0m
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.7ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::SyntaxError: ERROR:  syntax error at or near ")"
+LINE 1: SELECT "users".* FROM "users" WHERE (merchant_amount > ?)
+                                                                ^
+: SELECT "users".* FROM "users" WHERE (merchant_amount > ?)):
+  
+app/controllers/merchants_controller.rb:14:in `index'
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.3ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (60.3ms)
+Started GET "/merchants?request_amount=200" for ::1 at 2016-12-08 18:23:04 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"200"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '200')[0m
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/merchants?request_amount=232" for ::1 at 2016-12-08 18:23:09 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"232"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '232')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/merchants?request_amount=232" for ::1 at 2016-12-08 18:23:33 +0800
+  
+SyntaxError (/Users/poondq/projects/peerex3/app/controllers/merchants_controller.rb:10: syntax error, unexpected =>, expecting keyword_end
+			:notice => "you are fucked"
+			          ^):
+  
+app/controllers/merchants_controller.rb:10: syntax error, unexpected =>, expecting keyword_end
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.8ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (57.7ms)
+Started GET "/merchants?request_amount=232" for ::1 at 2016-12-08 18:23:45 +0800
+  
+SyntaxError (/Users/poondq/projects/peerex3/app/controllers/merchants_controller.rb:10: syntax error, unexpected =>, expecting keyword_end
+			:notice => 'you are fucked'
+			          ^):
+  
+app/controllers/merchants_controller.rb:10: syntax error, unexpected =>, expecting keyword_end
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.0ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (76.5ms)
+Started GET "/merchants?request_amount=232" for ::1 at 2016-12-08 18:23:51 +0800
+  
+SyntaxError (/Users/poondq/projects/peerex3/app/controllers/merchants_controller.rb:10: syntax error, unexpected =>, expecting keyword_end
+			notice => 'you are fucked'
+			         ^):
+  
+app/controllers/merchants_controller.rb:10: syntax error, unexpected =>, expecting keyword_end
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.4ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (60.2ms)
+Started GET "/merchants?request_amount=232" for ::1 at 2016-12-08 18:23:56 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"232"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '232')[0m
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/merchants?request_amount=232" for ::1 at 2016-12-08 18:24:41 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"232"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '232')[0m
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/merchants?request_amount=1" for ::1 at 2016-12-08 18:24:44 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '1')[0m
+Completed 200 OK in 17ms (Views: 0.1ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/merchants?request_amount=1" for ::1 at 2016-12-08 18:25:04 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '1')[0m
+Completed 200 OK in 15ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=2" for ::1 at 2016-12-08 18:25:07 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '2')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=100" for ::1 at 2016-12-08 18:25:15 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"100"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '100')[0m
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/merchants?request_amount=2" for ::1 at 2016-12-08 18:25:23 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '2')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-12-08 18:25:32 +0800
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering dashboard/index.html.erb within layouts/application
+  [1m[36mTraveller Load (0.3ms)[0m  [1m[34mSELECT "travellers".* FROM "travellers"[0m
+  Rendered dashboard/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 77ms (Views: 68.8ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/profile" for ::1 at 2016-12-08 18:25:34 +0800
+Processing by ProfileController#index as HTML
+  [1m[36mUser Load (6.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering profile/index.html.erb within layouts/application
+  Rendered profile/index.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 144ms (Views: 126.6ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/cashbalance" for ::1 at 2016-12-08 18:25:35 +0800
+Processing by CashbalanceController#index as HTML
+  Rendering cashbalance/index.html.erb within layouts/application
+  Rendered cashbalance/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 173ms (Views: 169.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/profile" for ::1 at 2016-12-08 18:25:36 +0800
+Processing by ProfileController#index as HTML
+  [1m[36mUser Load (12.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering profile/index.html.erb within layouts/application
+  Rendered profile/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 220ms (Views: 199.3ms | ActiveRecord: 12.5ms)
+
+
+Started PATCH "/setting/2" for ::1 at 2016-12-08 18:25:41 +0800
+Processing by SettingController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ymYl/Js1QXEDLSk4uGLiZClsl6wNLMiREtjKkDnYqIcRY8RehVTjouinNLSDSh2uArT01TS+d7R8kHTkmhJEBQ==", "user"=>{"merchant_avatar"=>"", "merchant_id"=>"", "merchant_address"=>"", "merchant_amount"=>"999", "merchant_status"=>""}, "commit"=>"Update", "id"=>"2"}
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (10.7ms)[0m  [1m[33mUPDATE "users" SET "merchant_amount" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["merchant_amount", "999"], ["updated_at", 2016-12-08 10:25:41 UTC], ["id", 2]]
+  [1m[35m (4.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/setting?id=2
+Completed 302 Found in 30ms (ActiveRecord: 18.8ms)
+
+
+Started GET "/setting?id=2" for ::1 at 2016-12-08 18:25:41 +0800
+Processing by SettingController#index as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering setting/index.html.erb within layouts/application
+  Rendered setting/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 73ms (Views: 66.3ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/setting/2" for ::1 at 2016-12-08 18:25:49 +0800
+Processing by SettingController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YvrJDBIrgQWfAwX5RsCRe2alCmXCXSSX+i9zGsx08qLI1+K4H2V1uxKwT+9RVtBUjDSt2rsVHBHD686ULT9cJw==", "user"=>{"merchant_avatar"=>"31231", "merchant_id"=>"test", "merchant_address"=>"test", "merchant_amount"=>"999", "merchant_status"=>"test"}, "commit"=>"Update", "id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[33mUPDATE "users" SET "merchant_avatar" = $1, "merchant_id" = $2, "merchant_address" = $3, "merchant_status" = $4, "updated_at" = $5 WHERE "users"."id" = $6[0m  [["merchant_avatar", "31231"], ["merchant_id", "test"], ["merchant_address", "test"], ["merchant_status", "test"], ["updated_at", 2016-12-08 10:25:49 UTC], ["id", 2]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/setting?id=2
+Completed 302 Found in 10ms (ActiveRecord: 4.1ms)
+
+
+Started GET "/setting?id=2" for ::1 at 2016-12-08 18:25:49 +0800
+Processing by SettingController#index as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering setting/index.html.erb within layouts/application
+  Rendered setting/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 65ms (Views: 61.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/merchants?request_amount=10" for ::1 at 2016-12-08 18:25:56 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"10"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '10')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/merchants?request_amount=2" for ::1 at 2016-12-08 18:25:58 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '2')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=3" for ::1 at 2016-12-08 18:26:01 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '3')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=4" for ::1 at 2016-12-08 18:26:02 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '4')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=100" for ::1 at 2016-12-08 18:26:04 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"100"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '100')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/merchants?request_amount=200" for ::1 at 2016-12-08 18:26:06 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"200"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '200')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=300" for ::1 at 2016-12-08 18:26:08 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"300"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '300')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=999" for ::1 at 2016-12-08 18:26:12 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"999"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '999')[0m
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=998" for ::1 at 2016-12-08 18:26:14 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"998"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '998')[0m
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=996" for ::1 at 2016-12-08 18:26:15 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"996"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '996')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=995" for ::1 at 2016-12-08 18:26:16 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"995"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '995')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=9953" for ::1 at 2016-12-08 18:26:17 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"9953"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '9953')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=99531" for ::1 at 2016-12-08 18:26:18 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"99531"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '99531')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=99531" for ::1 at 2016-12-08 18:26:18 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"99531"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '99531')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=99531" for ::1 at 2016-12-08 18:26:19 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"99531"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '99531')[0m
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/merchants?request_amount=99531" for ::1 at 2016-12-08 18:26:20 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"99531"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '99531')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=99531" for ::1 at 2016-12-08 18:26:20 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"99531"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '99531')[0m
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/merchants?request_amount=3333" for ::1 at 2016-12-08 18:26:23 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"3333"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '3333')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=1" for ::1 at 2016-12-08 18:26:26 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '1')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=2" for ::1 at 2016-12-08 18:26:27 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '2')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=3" for ::1 at 2016-12-08 18:26:28 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '3')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=4" for ::1 at 2016-12-08 18:26:28 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '4')[0m
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/merchants?request_amount=5" for ::1 at 2016-12-08 18:26:29 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '5')[0m
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=6" for ::1 at 2016-12-08 18:26:30 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '6')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=7" for ::1 at 2016-12-08 18:26:31 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '7')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=1" for ::1 at 2016-12-08 18:26:32 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '1')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=0" for ::1 at 2016-12-08 18:26:34 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"0"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '0')[0m
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/merchants?request_amount=999" for ::1 at 2016-12-08 18:26:35 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"999"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '999')[0m
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/merchants?request_amount=9999" for ::1 at 2016-12-08 18:26:37 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"9999"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '9999')[0m
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=1000" for ::1 at 2016-12-08 18:26:40 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"1000"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '1000')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=999" for ::1 at 2016-12-08 18:26:43 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"999"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '999')[0m
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=101" for ::1 at 2016-12-08 18:27:25 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"101"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '101')[0m
+Completed 200 OK in 15ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=1001" for ::1 at 2016-12-08 18:27:29 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"1001"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '1001')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=1001" for ::1 at 2016-12-08 18:27:30 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"1001"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '1001')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=1001" for ::1 at 2016-12-08 18:27:30 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"1001"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '1001')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=1001" for ::1 at 2016-12-08 18:27:30 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"1001"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '1001')[0m
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/merchants?request_amount=1001" for ::1 at 2016-12-08 18:27:31 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"1001"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '1001')[0m
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/merchants?request_amount=1001" for ::1 at 2016-12-08 18:27:31 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"1001"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '1001')[0m
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/merchants?request_amount=1001" for ::1 at 2016-12-08 18:27:31 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"1001"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '1001')[0m
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/merchants?request_amount=1001" for ::1 at 2016-12-08 18:27:31 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"1001"}
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '1001')[0m
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/merchants?request_amount=2030" for ::1 at 2016-12-08 18:27:37 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"2030"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '2030')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=9999" for ::1 at 2016-12-08 18:27:39 +0800
+Processing by MerchantsController#index as */*
+  Parameters: {"request_amount"=>"9999"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '9999')[0m
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=1001" for ::1 at 2016-12-08 18:29:56 +0800
+  
+SyntaxError (/Users/poondq/projects/peerex3/app/controllers/merchants_controller.rb:8: syntax error, unexpected tIDENTIFIER, expecting ')'
+			@user = User.where(:merchant_amount > ?, params[:request_amount])
+			                                               ^
+/Users/poondq/projects/peerex3/app/controllers/merchants_controller.rb:8: syntax error, unexpected ')', expecting keyword_end):
+  
+app/controllers/merchants_controller.rb:8: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/controllers/merchants_controller.rb:8: syntax error, unexpected ')', expecting keyword_end
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.0ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (61.9ms)
+Started GET "/merchants?request_amount=100" for ::1 at 2016-12-08 18:30:00 +0800
+  
+SyntaxError (/Users/poondq/projects/peerex3/app/controllers/merchants_controller.rb:8: syntax error, unexpected tIDENTIFIER, expecting ')'
+			@user = User.where(:merchant_amount > ?, params[:request_amount])
+			                                               ^
+/Users/poondq/projects/peerex3/app/controllers/merchants_controller.rb:8: syntax error, unexpected ')', expecting keyword_end):
+  
+app/controllers/merchants_controller.rb:8: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/controllers/merchants_controller.rb:8: syntax error, unexpected ')', expecting keyword_end
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.0ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (57.6ms)
+Started GET "/merchants?request_amount=1" for ::1 at 2016-12-08 18:30:02 +0800
+  
+SyntaxError (/Users/poondq/projects/peerex3/app/controllers/merchants_controller.rb:8: syntax error, unexpected tIDENTIFIER, expecting ')'
+			@user = User.where(:merchant_amount > ?, params[:request_amount])
+			                                               ^
+/Users/poondq/projects/peerex3/app/controllers/merchants_controller.rb:8: syntax error, unexpected ')', expecting keyword_end):
+  
+app/controllers/merchants_controller.rb:8: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/controllers/merchants_controller.rb:8: syntax error, unexpected ')', expecting keyword_end
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.1ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (61.1ms)
+Started GET "/merchants?request_amount=321" for ::1 at 2016-12-08 18:30:07 +0800
+  
+SyntaxError (/Users/poondq/projects/peerex3/app/controllers/merchants_controller.rb:8: syntax error, unexpected tIDENTIFIER, expecting ')'
+			@user = User.where(:merchant_amount > ?, params[:request_amount])
+			                                               ^
+/Users/poondq/projects/peerex3/app/controllers/merchants_controller.rb:8: syntax error, unexpected ')', expecting keyword_end):
+  
+app/controllers/merchants_controller.rb:8: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/controllers/merchants_controller.rb:8: syntax error, unexpected ')', expecting keyword_end
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.8ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (59.8ms)
+Started GET "/setting?id=2" for ::1 at 2016-12-08 18:30:10 +0800
+Processing by SettingController#index as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering setting/index.html.erb within layouts/application
+  Rendered setting/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 106ms (Views: 78.4ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/merchants?request_amount=321" for ::1 at 2016-12-08 18:33:19 +0800
+  
+SyntaxError (/Users/poondq/projects/peerex3/app/controllers/merchants_controller.rb:9: syntax error, unexpected ',', expecting '}'
+....select{"merchant_amount < ?" , params[:request_amount]}
+...                               ^):
+  
+app/controllers/merchants_controller.rb:9: syntax error, unexpected ',', expecting '}'
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.1ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (60.7ms)
+Started GET "/merchants?request_amount=1" for ::1 at 2016-12-08 18:33:26 +0800
+  
+SyntaxError (/Users/poondq/projects/peerex3/app/controllers/merchants_controller.rb:9: syntax error, unexpected ',', expecting '}'
+....select{"merchant_amount < ?" , params[:request_amount]}
+...                               ^):
+  
+app/controllers/merchants_controller.rb:9: syntax error, unexpected ',', expecting '}'
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.3ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (55.0ms)
+Started GET "/" for ::1 at 2016-12-08 18:33:30 +0800
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering dashboard/index.html.erb within layouts/application
+  [1m[36mTraveller Load (0.4ms)[0m  [1m[34mSELECT "travellers".* FROM "travellers"[0m
+  Rendered dashboard/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 145ms (Views: 57.9ms | ActiveRecord: 60.1ms)
+
+
+Started GET "/31231" for ::1 at 2016-12-08 18:33:30 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/31231"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered collection of /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [72 times] (17.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (16.3ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (114.4ms)
+Started GET "/" for ::1 at 2016-12-08 18:33:31 +0800
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering dashboard/index.html.erb within layouts/application
+  [1m[36mTraveller Load (0.4ms)[0m  [1m[34mSELECT "travellers".* FROM "travellers"[0m
+  Rendered dashboard/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 141ms (Views: 136.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/31231" for ::1 at 2016-12-08 18:33:31 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/31231"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered collection of /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [72 times] (18.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (146.5ms)
+Started GET "/31231" for ::1 at 2016-12-08 18:33:32 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/31231"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+Started GET "/" for ::1 at 2016-12-08 18:33:32 +0800
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  [1m[36mTraveller Load (28.0ms)[0m  [1m[34mSELECT "travellers".* FROM "travellers"[0m
+  Rendered dashboard/index.html.erb within layouts/application (52.6ms)
+  Rendered collection of /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [72 times] (18.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (145.4ms)
+Completed 200 OK in 204ms (Views: 165.7ms | ActiveRecord: 31.1ms)
+
+
+Started GET "/merchants?request_amount=1" for ::1 at 2016-12-08 18:33:36 +0800
+  
+SyntaxError (/Users/poondq/projects/peerex3/app/controllers/merchants_controller.rb:9: syntax error, unexpected ',', expecting '}'
+....select{"merchant_amount < ?" , params[:request_amount]}
+...                               ^):
+  
+app/controllers/merchants_controller.rb:9: syntax error, unexpected ',', expecting '}'
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.9ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (58.5ms)
+Started GET "/merchants?request_amount=2" for ::1 at 2016-12-08 18:34:03 +0800
+  
+SyntaxError (/Users/poondq/projects/peerex3/app/controllers/merchants_controller.rb:9: syntax error, unexpected ',', expecting '}'
+....select{"merchant_amount > ?" , params[:request_amount]}
+...                               ^):
+  
+app/controllers/merchants_controller.rb:9: syntax error, unexpected ',', expecting '}'
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.9ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (62.4ms)
+Started GET "/merchants?request_amount=2" for ::1 at 2016-12-08 18:34:17 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"2"}
+  [1m[36mUser Load (6.8ms)[0m  [1m[34mSELECT merchant_amount > ?, 2 FROM "users"[0m
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 6.8ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::SyntaxError: ERROR:  syntax error at or near ","
+LINE 1: SELECT merchant_amount > ?, 2 FROM "users"
+                                  ^
+: SELECT merchant_amount > ?, 2 FROM "users"):
+  
+app/controllers/merchants_controller.rb:16:in `index'
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.9ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (57.6ms)
+Started GET "/merchants?request_amount=100" for ::1 at 2016-12-08 18:34:33 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"100"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT merchant_amount > ?, 100 FROM "users"[0m
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::SyntaxError: ERROR:  syntax error at or near ","
+LINE 1: SELECT merchant_amount > ?, 100 FROM "users"
+                                  ^
+: SELECT merchant_amount > ?, 100 FROM "users"):
+  
+app/controllers/merchants_controller.rb:16:in `index'
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.5ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (61.7ms)
+Started GET "/merchants?request_amount=1000" for ::1 at 2016-12-08 18:34:34 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"1000"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT merchant_amount > ?, 1000 FROM "users"[0m
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 1.4ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::SyntaxError: ERROR:  syntax error at or near ","
+LINE 1: SELECT merchant_amount > ?, 1000 FROM "users"
+                                  ^
+: SELECT merchant_amount > ?, 1000 FROM "users"):
+  
+app/controllers/merchants_controller.rb:16:in `index'
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.3ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.1ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (76.6ms)
+Started GET "/merchants?request_amount=100" for ::1 at 2016-12-08 18:34:38 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"100"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT merchant_amount > ?, 100 FROM "users"[0m
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 1.5ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::SyntaxError: ERROR:  syntax error at or near ","
+LINE 1: SELECT merchant_amount > ?, 100 FROM "users"
+                                  ^
+: SELECT merchant_amount > ?, 100 FROM "users"):
+  
+app/controllers/merchants_controller.rb:16:in `index'
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.3ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (58.1ms)
+Started GET "/merchants?request_amount=100" for ::1 at 2016-12-08 18:35:02 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"100"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT merchant_amount > ?, 100 FROM "users"[0m
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::SyntaxError: ERROR:  syntax error at or near ","
+LINE 1: SELECT merchant_amount > ?, 100 FROM "users"
+                                  ^
+: SELECT merchant_amount > ?, 100 FROM "users"):
+  
+app/controllers/merchants_controller.rb:16:in `index'
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.2ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (62.8ms)
+Started GET "/merchants?request_amount=100" for ::1 at 2016-12-08 18:35:20 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"100"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '100')[0m
+Completed 200 OK in 17ms (Views: 0.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/merchants?request_amount=100" for ::1 at 2016-12-08 18:35:46 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"100"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '100')[0m
+Completed 200 OK in 15ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/merchants?request_amount=102" for ::1 at 2016-12-08 18:35:49 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"102"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '102')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/merchants?request_amount=1000" for ::1 at 2016-12-08 18:35:52 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"1000"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '1000')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=10099" for ::1 at 2016-12-08 18:35:58 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"10099"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '10099')[0m
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=1" for ::1 at 2016-12-08 18:36:01 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '1')[0m
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/merchants?request_amount=999" for ::1 at 2016-12-08 18:36:27 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"999"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '999')[0m
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=1000" for ::1 at 2016-12-08 18:36:33 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"1000"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '1000')[0m
+Completed 200 OK in 21ms (Views: 0.1ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/merchants?request_amount=1000" for ::1 at 2016-12-08 18:36:44 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"1000"}
+  [1m[36mUser Load (6.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount => '1000')[0m
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 6.7ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::SyntaxError: ERROR:  syntax error at or near "=>"
+LINE 1: ...ECT "users".* FROM "users" WHERE (merchant_amount => '1000')
+                                                             ^
+: SELECT "users".* FROM "users" WHERE (merchant_amount => '1000')):
+  
+app/controllers/merchants_controller.rb:16:in `index'
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.7ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (59.1ms)
+Started GET "/merchants?request_amount=999" for ::1 at 2016-12-08 18:36:56 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"999"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '999')[0m
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=998" for ::1 at 2016-12-08 18:37:00 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"998"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '998')[0m
+Completed 200 OK in 16ms (Views: 0.1ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/merchants?request_amount=1" for ::1 at 2016-12-08 18:37:07 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '1')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=2" for ::1 at 2016-12-08 18:37:09 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '2')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=3" for ::1 at 2016-12-08 18:37:11 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '3')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=1001" for ::1 at 2016-12-08 18:37:14 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"1001"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '1001')[0m
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=999" for ::1 at 2016-12-08 18:37:17 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"999"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '999')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=999" for ::1 at 2016-12-08 18:38:24 +0800
+  
+SyntaxError (/Users/poondq/projects/peerex3/app/controllers/merchants_controller.rb:24: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/merchants_controller.rb:24: syntax error, unexpected end-of-input, expecting keyword_end
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.8ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (60.2ms)
+Started GET "/merchants?request_amount=999" for ::1 at 2016-12-08 18:38:50 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"999"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '999')[0m
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/merchants?request_amount=998" for ::1 at 2016-12-08 18:38:54 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"998"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '998')[0m
+Completed 200 OK in 18ms (Views: 0.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/merchants?request_amount=1001" for ::1 at 2016-12-08 18:38:56 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"1001"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '1001')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=200" for ::1 at 2016-12-08 18:38:59 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"200"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '200')[0m
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/merchants?request_amount=2002" for ::1 at 2016-12-08 18:38:59 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"2002"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '2002')[0m
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/merchants?request_amount=999" for ::1 at 2016-12-08 18:39:02 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"999"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '999')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/merchants?request_amount=999" for ::1 at 2016-12-08 18:42:36 +0800
+  
+SyntaxError (/Users/poondq/projects/peerex3/app/controllers/merchants_controller.rb:4: syntax error, unexpected '\n', expecting &. or :: or '[' or '.'):
+  
+app/controllers/merchants_controller.rb:4: syntax error, unexpected '\n', expecting &. or :: or '[' or '.'
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.4ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (58.7ms)
+Started GET "/merchants?request_amount=999" for ::1 at 2016-12-08 18:42:43 +0800
+  
+SyntaxError (/Users/poondq/projects/peerex3/app/controllers/merchants_controller.rb:4: syntax error, unexpected '\n', expecting &. or :: or '[' or '.'):
+  
+app/controllers/merchants_controller.rb:4: syntax error, unexpected '\n', expecting &. or :: or '[' or '.'
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.7ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (63.1ms)
+Started GET "/merchants?request_amount=999" for ::1 at 2016-12-08 18:42:50 +0800
+  
+SyntaxError (/Users/poondq/projects/peerex3/app/controllers/merchants_controller.rb:4: syntax error, unexpected '\n', expecting &. or :: or '[' or '.'):
+  
+app/controllers/merchants_controller.rb:4: syntax error, unexpected '\n', expecting &. or :: or '[' or '.'
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.4ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (61.9ms)
+Started GET "/merchants?request_amount=999" for ::1 at 2016-12-08 18:42:59 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"999"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '999')[0m
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/merchants?request_amount=1001" for ::1 at 2016-12-08 18:43:03 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"1001"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '1001')[0m
+Completed 200 OK in 16ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/merchants?request_amount=988" for ::1 at 2016-12-08 18:43:07 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"988"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '988')[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/merchants?request_amount=1000" for ::1 at 2016-12-08 19:17:34 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"1000"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '1000')[0m
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/merchants?request_amount=1001" for ::1 at 2016-12-08 19:18:37 +0800
+Processing by MerchantsController#index as HTML
+  Parameters: {"request_amount"=>"1001"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (merchant_amount > '1001')[0m
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-12-08 19:21:42 +0800
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering dashboard/index.html.erb within layouts/application
+  [1m[36mTraveller Load (0.4ms)[0m  [1m[34mSELECT "travellers".* FROM "travellers"[0m
+  Rendered dashboard/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 120ms (Views: 100.3ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/31231" for ::1 at 2016-12-08 19:21:42 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/31231"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered collection of /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [72 times] (29.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (140.7ms)
+Started GET "/31231" for ::1 at 2016-12-08 19:21:43 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/31231"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered collection of /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [72 times] (33.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (136.0ms)
+Started GET "/" for ::1 at 2016-12-08 19:24:11 +0800
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering dashboard/index.html.erb within layouts/application
+  [1m[36mTraveller Load (0.3ms)[0m  [1m[34mSELECT "travellers".* FROM "travellers"[0m
+  Rendered dashboard/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 80ms (Views: 76.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/31231" for ::1 at 2016-12-08 19:24:11 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/31231"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered collection of /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [72 times] (29.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (148.2ms)
+Started GET "/31231" for ::1 at 2016-12-08 19:24:12 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/31231"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered collection of /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [72 times] (34.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (136.5ms)
+Started GET "/" for ::1 at 2016-12-08 19:35:44 +0800
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering dashboard/index.html.erb within layouts/application
+  [1m[36mTraveller Load (0.5ms)[0m  [1m[34mSELECT "travellers".* FROM "travellers"[0m
+  Rendered dashboard/index.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 211ms (Views: 98.5ms | ActiveRecord: 17.4ms)
+
+
+Started GET "/31231" for ::1 at 2016-12-08 19:35:45 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/31231"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered collection of /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [72 times] (33.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.8ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (141.6ms)
