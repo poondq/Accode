@@ -1,12 +1,8 @@
 class MerchantsController < ApplicationController
 	def index
-		# params[:lat]
-		 # params[:request_zone]
-		# params[:request_amount]
 
-		if params[:request_amount].present?
-			 @user = User.where("merchant_amount > ?", params[:request_amount])
-			 @user = User.select("merchant_amount > ?", params[:request_amount])
+		if params[:request_amount].present? || params[:request_zone].present?
+			 @user = User.where("merchant_amount > ?", params[:request_amount].to_i)
 
 		else
 			@user = User.all
@@ -17,6 +13,8 @@ class MerchantsController < ApplicationController
 		end
 
 	 def show
-	 	render json: User.find(params[:id])
+	 		# render json: @user.to_json
+
+	 	# render json: User.find(params[:id])
 	 end
 end
