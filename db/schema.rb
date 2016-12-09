@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161208134013) do
+ActiveRecord::Schema.define(version: 20161209080357) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,16 +46,16 @@ ActiveRecord::Schema.define(version: 20161208134013) do
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
     t.string   "merchant_id"
-    t.integer  "merchant_rating"
     t.string   "merchant_address"
     t.string   "merchant_avatar"
-    t.boolean  "merchant_status"
-    t.integer  "merchant_amount"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.string   "merchant_name"
     t.string   "merchant_location"
     t.string   "merchant_image"
+    t.integer  "merchant_amount"
+    t.boolean  "merchant_status"
+    t.integer  "merchant_rating"
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
