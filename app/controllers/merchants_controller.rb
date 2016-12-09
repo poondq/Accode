@@ -2,11 +2,10 @@ class MerchantsController < ApplicationController
 	def index
 
 		if params[:request_amount].present? || params[:request_zone].present?
-			 @user = User.where("merchant_amount > ?", params[:request_amount])
-		else
+			 @user = User.where("merchant_amount > ?", params[:request_amount]) && User.where("merchant_zone = ?", params[:request_zone])
+			else
 			@user = User.all
-		end
-
+		end		
 
 		  	render json: @user.to_json
 		end
