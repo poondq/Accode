@@ -31,18 +31,13 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.0]
       # t.datetime :locked_at
 
       t.string :merchant_id
-      t.string :merchant_rating
+      t.string :merchant_name
+      t.string :merchant_number
+      t.integer :merchant_rating
       t.string :merchant_address
       t.string :merchant_avatar
-      t.string :merchant_status
-      t.string :merchant_amount
-      t.string :merchant_transactionref
-
-      t.string :traveller_id
-      t.string :traveller_avatar
-      t.string :traveller_name
-      t.string :traveller_number
-      t.string :traveller_transactionref
+      t.boolean :merchant_status
+      t.integer :merchant_amount
 
       t.timestamps null: false
     end

@@ -10,28 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161209080941) do
+ActiveRecord::Schema.define(version: 20161209151733) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "transactions", force: :cascade do |t|
     t.string   "transaction_id"
-    t.string   "reference"
-    t.float    "amount"
+    t.integer  "amount"
     t.string   "time"
     t.string   "date"
+    t.integer  "fee"
+    t.string   "address"
+    t.string   "status"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
   end
 
   create_table "travellers", force: :cascade do |t|
-    t.string   "traveller_name"
+    t.string   "firstname"
+    t.string   "lastname"
+    t.integer  "creditcard"
+    t.string   "photo"
+    t.string   "email"
+    t.string   "number"
     t.string   "traveller_id"
-    t.string   "traveller_avatar"
-    t.string   "traveller_number"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -46,16 +51,15 @@ ActiveRecord::Schema.define(version: 20161209080941) do
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
     t.string   "merchant_id"
+    t.string   "merchant_name"
+    t.string   "merchant_number"
+    t.integer  "merchant_rating"
     t.string   "merchant_address"
     t.string   "merchant_avatar"
+    t.boolean  "merchant_status"
+    t.integer  "merchant_amount"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
-    t.string   "merchant_name"
-    t.string   "merchant_location"
-    t.string   "merchant_image"
-    t.integer  "merchant_amount"
-    t.boolean  "merchant_status"
-    t.integer  "merchant_rating"
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
