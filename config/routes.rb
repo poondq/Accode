@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
-	# resources :dashboard, :profile, :setting, :transaction, :travellers, :cashbalance, :merchants
+	resources :dashboard, :profile, :setting, :transaction, :travellers, :cashbalance, :merchants
 
-  # devise_for :users, :travellers
+   devise_for :users, :travellers
 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
