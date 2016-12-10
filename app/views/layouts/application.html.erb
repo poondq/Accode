@@ -9,7 +9,8 @@
 
 
 <nav class="navbar navbar-default">
-<div align="center"> <%= link_to image_tag("http://i.imgur.com/fnuxGKh.png",:size => "32x42",:class => "peerex_logo"), root_path %> </div>
+<div align="center"> <%= link_to image_tag("http://i.imgur.com/fnuxGKh.png",:size => "32x42",:class => "peerex_logo"), root_path %> 
+</div>
      <div class="container">
        <div class="navbar-brand">
          <a href="/dashboard">Dashboard</a>
@@ -17,9 +18,13 @@
          <a href="/transaction">Transactions</a>
          <a href="/cashbalance">Cash Balance</a>
          <a href="/setting">Settings</a>
-        <a href="users/logout">Logout</a>
+
+         <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+       
+       </div>
         </div>
         </div>
+
 </nav>
 
   </head>

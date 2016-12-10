@@ -2,8 +2,24 @@
 <div class="row" align="center"> <h2> CASH PICKUP REQUESTS </h2></div>
 
 	<div class="row">
-	
-		
-	</div>
-</div>
+  <div class="col-xs-12 col-sm-12 col-lg-12" align="center">
 
+	<table>
+		<tr>
+			<th>Reference</th>
+			<th>Requestor</th>
+			<th>Amount(SGD)</th>
+			<th>Action</th>
+		</tr>
+		<tr>
+		<% @traveller.each do |traveller| %>
+			<td>transaction ref <br> timestamp</td>
+			<td>avatar <div>traveller name <br> traveller email</div></td>
+			<td>request amount</td>
+			<td>complete <br> cancel</td>
+		</tr>
+		<%end %>
+	</table>	
+	</div>
+	</div>
+	</div>

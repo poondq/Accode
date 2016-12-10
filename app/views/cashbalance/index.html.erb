@@ -1,36 +1,27 @@
-CASH BALANCE
+<div class="container>
+<div class="row" align="center"> <h2> Cash Balance </h2></div>
 
-<div> logo | <a href="/">Dashboard</a> | <a href="/transaction">Transaction</a> | <a href="/cashbalance">Cash Balance</a> | <a href="/profile">Profile</a> | <a href="/setting">Setting</a> </div><br><br>
+	<div class="row">
+  <div class="col-xs-12 col-sm-12 col-lg-12" align="center">
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<b> To Be Completed </b>
-
-<div>CURRENT CASH BALANCE</div>			<div> TOPUP/WITHDRAW</div> <div>THIS MONTH</div>
-
-<table>
-<th>DATE</th> <th>DESCRIPTION</th> <th>OUT</th> <th>IN</th> <th>BALANCE</th>
-<tr>
-<td>DATE</td> <td>CASH REQUEST <br> REF:161120132</td> <td>$20.00</td> <td></td> <td>$230.00</td>
-</table>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<div>
-footer
-Peerex 2016
-</div>
+	<table>
+		<tr>
+			<th>Date</th>
+			<th>Description</th>
+			<th>Out (SGD)</th>
+			<th>In (SGD)</th>
+			<th>Balance (SGD)</th>
+		</tr>
+		<tr>
+		<% @user.each do |user| %>
+			<td>Date</td>
+			<td>CASH REQUEST <br> transaction ref</td>
+			<td><h3>$20.00</h3></td>
+			<td><h3></h3> </td>
+			<td>Balance Amount</td>
+		</tr>
+		<%end %>
+	</table>	
+	</div>
+	</div>
+	</div>
