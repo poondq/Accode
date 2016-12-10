@@ -1,3 +1,3 @@
 class Traveller < ApplicationRecord
-	# has_many :transaction
+	 has_many :transaction
 end

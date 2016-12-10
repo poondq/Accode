@@ -13605,3 +13605,293 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 [0m
+Started GET "/" for ::1 at 2016-12-10 13:59:14 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (6.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (24.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/index.html.erb within layouts/application
+  [1m[36mTraveller Load (0.3ms)[0m  [1m[34mSELECT "travellers".* FROM "travellers"[0m
+  Rendered dashboard/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 281ms (Views: 130.8ms | ActiveRecord: 83.4ms)
+
+
+Started GET "/" for ::1 at 2016-12-10 13:59:25 +0800
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (42.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/index.html.erb within layouts/application
+  [1m[36mTraveller Load (2.3ms)[0m  [1m[34mSELECT "travellers".* FROM "travellers"[0m
+  Rendered dashboard/index.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 203ms (Views: 152.6ms | ActiveRecord: 45.0ms)
+
+
+Started GET "/transaction" for ::1 at 2016-12-10 13:59:28 +0800
+Processing by TransactionController#index as HTML
+  [1m[36mUser Load (9.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering transaction/index.html.erb within layouts/application
+  Rendered transaction/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 156ms (Views: 141.5ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/" for ::1 at 2016-12-10 13:59:28 +0800
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (13.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/index.html.erb within layouts/application
+  [1m[36mTraveller Load (30.4ms)[0m  [1m[34mSELECT "travellers".* FROM "travellers"[0m
+  Rendered dashboard/index.html.erb within layouts/application (34.8ms)
+Completed 200 OK in 207ms (Views: 156.3ms | ActiveRecord: 43.6ms)
+
+
+Started GET "/transaction" for ::1 at 2016-12-10 13:59:33 +0800
+Processing by TransactionController#index as HTML
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering transaction/index.html.erb within layouts/application
+  Rendered transaction/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 183ms (Views: 172.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/cashbalance" for ::1 at 2016-12-10 13:59:34 +0800
+Processing by CashbalanceController#index as HTML
+  Rendering cashbalance/index.html.erb within layouts/application
+  Rendered cashbalance/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 111ms (Views: 98.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-12-10 13:59:34 +0800
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (11.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/index.html.erb within layouts/application
+  [1m[36mTraveller Load (2.0ms)[0m  [1m[34mSELECT "travellers".* FROM "travellers"[0m
+  Rendered dashboard/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 181ms (Views: 162.5ms | ActiveRecord: 13.2ms)
+
+
+Started GET "/transaction" for ::1 at 2016-12-10 13:59:36 +0800
+Processing by TransactionController#index as HTML
+  [1m[36mUser Load (44.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering transaction/index.html.erb within layouts/application
+  Rendered transaction/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 149ms (Views: 98.0ms | ActiveRecord: 44.7ms)
+
+
+Started GET "/cashbalance" for ::1 at 2016-12-10 13:59:40 +0800
+Processing by CashbalanceController#index as HTML
+  Rendering cashbalance/index.html.erb within layouts/application
+  Rendered cashbalance/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 178ms (Views: 174.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cashbalance" for ::1 at 2016-12-10 13:59:41 +0800
+Processing by CashbalanceController#index as HTML
+  Rendering cashbalance/index.html.erb within layouts/application
+  Rendered cashbalance/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 156ms (Views: 152.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/transaction" for ::1 at 2016-12-10 13:59:41 +0800
+Processing by TransactionController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering transaction/index.html.erb within layouts/application
+  Rendered transaction/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 191ms (Views: 171.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2016-12-10 13:59:42 +0800
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (7.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/index.html.erb within layouts/application
+  [1m[36mTraveller Load (0.2ms)[0m  [1m[34mSELECT "travellers".* FROM "travellers"[0m
+  Rendered dashboard/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 128ms (Views: 116.4ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/" for ::1 at 2016-12-10 14:03:33 +0800
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/index.html.erb within layouts/application
+  [1m[36mTraveller Load (0.4ms)[0m  [1m[34mSELECT "travellers".* FROM "travellers"[0m
+  Rendered dashboard/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 119ms (Views: 79.7ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/" for ::1 at 2016-12-10 14:30:40 +0800
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/index.html.erb within layouts/application
+  [1m[36mTraveller Load (0.4ms)[0m  [1m[34mSELECT "travellers".* FROM "travellers"[0m
+  Rendered dashboard/index.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 253ms (Views: 228.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2016-12-10 14:35:59 +0800
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/index.html.erb within layouts/application
+  [1m[36mTraveller Load (1.4ms)[0m  [1m[34mSELECT "travellers".* FROM "travellers"[0m
+  Rendered dashboard/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 159ms (Views: 152.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/transaction" for ::1 at 2016-12-10 14:35:59 +0800
+Processing by TransactionController#index as HTML
+  [1m[36mUser Load (10.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering transaction/index.html.erb within layouts/application
+  Rendered transaction/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 175ms (Views: 156.5ms | ActiveRecord: 10.1ms)
+
+
+Started GET "/cashbalance" for ::1 at 2016-12-10 14:36:01 +0800
+Processing by CashbalanceController#index as HTML
+  Rendering cashbalance/index.html.erb within layouts/application
+  Rendered cashbalance/index.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 204ms (Views: 187.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cashbalance" for ::1 at 2016-12-10 14:39:58 +0800
+Processing by CashbalanceController#index as HTML
+  Rendering cashbalance/index.html.erb within layouts/application
+  Rendered cashbalance/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 152ms (Views: 137.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cashbalance" for ::1 at 2016-12-10 14:40:10 +0800
+Processing by CashbalanceController#index as HTML
+  Rendering cashbalance/index.html.erb within layouts/application
+  Rendered cashbalance/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 66ms (Views: 63.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cashbalance" for ::1 at 2016-12-10 14:41:00 +0800
+Processing by CashbalanceController#index as HTML
+  Rendering cashbalance/index.html.erb within layouts/application
+  Rendered cashbalance/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 95ms (Views: 93.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cashbalance" for ::1 at 2016-12-10 14:41:16 +0800
+Processing by CashbalanceController#index as HTML
+  Rendering cashbalance/index.html.erb within layouts/application
+  Rendered cashbalance/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 88ms (Views: 85.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cashbalance" for ::1 at 2016-12-10 14:41:38 +0800
+Processing by CashbalanceController#index as HTML
+  Rendering cashbalance/index.html.erb within layouts/application
+  Rendered cashbalance/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 55ms (Views: 52.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cashbalance" for ::1 at 2016-12-10 14:41:53 +0800
+Processing by CashbalanceController#index as HTML
+  Rendering cashbalance/index.html.erb within layouts/application
+  Rendered cashbalance/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 55ms (Views: 53.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cashbalance" for ::1 at 2016-12-10 14:42:04 +0800
+Processing by CashbalanceController#index as HTML
+  Rendering cashbalance/index.html.erb within layouts/application
+  Rendered cashbalance/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 65ms (Views: 62.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-12-10 14:42:21 +0800
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/index.html.erb within layouts/application
+  [1m[36mTraveller Load (0.6ms)[0m  [1m[34mSELECT "travellers".* FROM "travellers"[0m
+  Rendered dashboard/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 196ms (Views: 186.0ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/" for ::1 at 2016-12-10 14:42:22 +0800
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/index.html.erb within layouts/application
+  [1m[36mTraveller Load (0.7ms)[0m  [1m[34mSELECT "travellers".* FROM "travellers"[0m
+  Rendered dashboard/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 169ms (Views: 164.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2016-12-10 14:42:37 +0800
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/index.html.erb within layouts/application
+  [1m[36mTraveller Load (0.3ms)[0m  [1m[34mSELECT "travellers".* FROM "travellers"[0m
+  Rendered dashboard/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 60ms (Views: 56.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2016-12-10 14:43:22 +0800
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/index.html.erb within layouts/application
+  [1m[36mTraveller Load (0.6ms)[0m  [1m[34mSELECT "travellers".* FROM "travellers"[0m
+  Rendered dashboard/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 90ms (Views: 83.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2016-12-10 14:43:48 +0800
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/index.html.erb within layouts/application
+  [1m[36mTraveller Load (0.2ms)[0m  [1m[34mSELECT "travellers".* FROM "travellers"[0m
+  Rendered dashboard/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 76ms (Views: 72.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2016-12-10 14:44:03 +0800
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/index.html.erb within layouts/application
+  [1m[36mTraveller Load (0.4ms)[0m  [1m[34mSELECT "travellers".* FROM "travellers"[0m
+  Rendered dashboard/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 100ms (Views: 93.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2016-12-10 14:44:40 +0800
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/index.html.erb within layouts/application
+  [1m[36mTraveller Load (0.2ms)[0m  [1m[34mSELECT "travellers".* FROM "travellers"[0m
+  Rendered dashboard/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 73ms (Views: 68.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-12-10 14:47:05 +0800
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/index.html.erb within layouts/application
+  [1m[36mTraveller Load (0.2ms)[0m  [1m[34mSELECT "travellers".* FROM "travellers"[0m
+  Rendered dashboard/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 103ms (Views: 99.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-12-10 14:48:30 +0800
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/index.html.erb within layouts/application
+  [1m[36mTraveller Load (0.3ms)[0m  [1m[34mSELECT "travellers".* FROM "travellers"[0m
+  Rendered dashboard/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 108ms (Views: 104.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2016-12-10 14:49:03 +0800
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/index.html.erb within layouts/application
+  [1m[36mTraveller Load (0.2ms)[0m  [1m[34mSELECT "travellers".* FROM "travellers"[0m
+  Rendered dashboard/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 67ms (Views: 63.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-12-10 14:49:49 +0800
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/index.html.erb within layouts/application
+  [1m[36mTraveller Load (0.3ms)[0m  [1m[34mSELECT "travellers".* FROM "travellers"[0m
+  Rendered dashboard/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 64ms (Views: 60.5ms | ActiveRecord: 0.6ms)
+
+
