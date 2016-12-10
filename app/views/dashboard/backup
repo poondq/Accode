@@ -1,0 +1,84 @@
+
+
+DASHBOARD  <%= current_user.merchant_id %> |  <%= link_to('Log Out', destroy_user_session_path, :method => :delete) %> | 
+<div> logo | <a href="/">Dashboard</a> | <a href="/transaction">Transaction</a> | <a href="/cashbalance">Cash Balance</a> | <a href="/profile">Profile</a> | <a href="/setting">Setting</a> </div><br><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div> 
+<div><img src="<%= current_user.merchant_avatar %>" height="50px" width="50px" ></div>
+<div>Status | <%= current_user.merchant_status %> </div>
+<div>Merchant Name | <%= current_user.merchant_id %> </div>
+<div>Address | <%= current_user.merchant_address %> </div>
+<div>Available Amount | <%= current_user.merchant_amount %> </div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<b> TO -BE COMPLETED</b>
+<div> 
+<table> <tr>
+<th>Reference</th> <th>Requestor</th> <th>Amt</th> <th>Action</th>
+</tr>
+<% @travellers.each do |traveller| %>
+<tr>
+<td><%= traveller.traveller_transactionref %> <br> Date <br> Time </td> 
+<td> <div> <%= traveller.traveller_avatar %> </div> <div> <%= traveller.traveller_name %> <br> Email </div> </td> 
+<td>Amt</td> 
+<td> <button class="complete_open">Complete</button>
+ <br> <button class="cancel_open">Cancel</button> </td>
+ </tr>
+ <% end%>
+
+</table>
+
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div>
+footer
+Peerex 2016
+</div>
+
+ <!-- Add content to the popup -->
+  <div id="complete">
+
+<div> I HAVE PASSED </div>
+<div> 20 SGD TO </div>
+<div> AVATAR </div> <div> <% @travellers.each do |traveller| %> <%= traveller.traveller_name %> <% end%> </div>
+
+<div><button> YES </button> <button> NO</button></div>
+
+    <!-- Add an optional button to close the popup -->
+    <!-- <button class="complete_close">Close</button> -->
+
+  </div>
+
+   <!-- Add content to the popup -->
+  <div id="cancel">
+
+<div> I WANT TO CANCEL </div>
+<div> 20 SGD CASH PICK UP REQUEST FROM </div>
+<div> AVATAR </div> <div> <% @travellers.each do |traveller| %> <%= traveller.traveller_name %> <% end%> </div>
+
+<div><button> YES </button> <button> NO</button></div>
+    <!-- Add an optional button to close the popup -->
+    <!-- <button class="cancel_close">Close</button> -->
+
+  </div>

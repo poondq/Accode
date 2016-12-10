@@ -1,3 +1,4 @@
 class Traveller < ApplicationRecord
-	 has_many :transaction
+	has_many :transactions
+	has_many :users, through: :transactions
 end

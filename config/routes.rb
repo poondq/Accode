@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
-	resources :dashboard, :profile, :setting, :transaction, :travellers, :cashbalance, :merchants
+  get 'requests/index'
+
+	resources :dashboard, :profile, :setting, :transaction, :travellers, :cashbalance, :merchants, :requests
 
    devise_for :users, :travellers
 
