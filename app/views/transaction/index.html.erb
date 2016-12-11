@@ -13,15 +13,16 @@
 			<th>Status</th>
 		</tr>
 		<tr>
-		<% @traveller.each do |traveller| %>
-			<td><a href="">transaction ref</a></td>
-			<td><h3>Requested Amount</h3></td>
+		<% @completed.each do |transactions| %>
+			<td><a href=""><%= transactions.transaction_id %></a></td>
+			<td><h3><%= transactions.amount %></h3></td>
 			<td><h3>Fees Earned</h3></td>
 			<td><h3>Total Amount</h3> </td>
-			<td>transaction status <br> timestamp</td>
+			<td><%= transactions.status %> <br> <%= transactions.updated_at %></td>
 		</tr>
 		<%end %>
 	</table>	
 	</div>
 	</div>
 	</div>
+

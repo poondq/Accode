@@ -12,14 +12,57 @@
 			<th>Action</th>
 		</tr>
 		<tr>
-		<% @traveller.each do |traveller| %>
-			<td>transaction ref <br> timestamp</td>
-			<td>avatar <div>traveller name <br> traveller email</div></td>
-			<td>request amount</td>
-			<td><button>complete</button> <br> <button>cancel</button></td>
+		<% @request.each do |t| %>
+			<td><%= t.transaction_id %><br><%= t.updated_at %></td>
+			<td><img src="<%= t.traveller.photo %>"> <div><%= t.traveller.firstname %> <br> <%= t.traveller.email %></div></td>
+			<td><%= t.amount %></td>
+			<td><button type="button" data-toggle="modal" class="btn btn-info btn-sm" data-target="#complete">complete</button> <br> <button type="button" data-toggle="modal" class="btn btn-info btn-sm" data-target="#cancel">cancel</button></td>
 		</tr>
 		<%end %>
 	</table>	
 	</div>
 	</div>
 	</div>
+
+<!-- Modal -->
+<div id="complete" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">I have passed</h4>
+      </div>
+      <div class="modal-body">
+        <h2> </h2>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Modal -->
+<div id="cancel" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal cancel</h4>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the modal.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
