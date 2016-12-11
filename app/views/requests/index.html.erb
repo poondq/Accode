@@ -14,7 +14,7 @@
 		<tr>
 		<% @request.each do |t| %>
 			<td><%= t.transaction_id %><br><%= t.updated_at %></td>
-			<td><img src="<%= t.traveller.photo %>"> <div><%= t.traveller.firstname %> <br> <%= t.traveller.email %></div></td>
+			<td><img src="<%= t.traveller.photo %>" style="width:50px;height:50px;"> <div><%= t.traveller.firstname %> <br> <%= t.traveller.email %></div></td>
 			<td><%= t.amount %></td>
 			<td><button type="button" data-toggle="modal" class="btn btn-info btn-sm" data-target="#complete">complete</button> <br> <button type="button" data-toggle="modal" class="btn btn-info btn-sm" data-target="#cancel">cancel</button></td>
 		</tr>

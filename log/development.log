@@ -17320,3 +17320,48 @@ Processing by RequestsController#index as HTML
 Completed 200 OK in 219ms (Views: 169.9ms | ActiveRecord: 44.4ms)
 
 
+Started GET "/requests" for ::1 at 2016-12-11 16:30:56 +0800
+Processing by RequestsController#index as HTML
+  Rendering requests/index.html.erb within layouts/application
+  [1m[36mTransaction Load (16.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."status" = $1[0m  [["status", "pending"]]
+  [1m[36mTraveller Load (0.9ms)[0m  [1m[34mSELECT  "travellers".* FROM "travellers" WHERE "travellers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered requests/index.html.erb within layouts/application (79.0ms)
+Completed 200 OK in 243ms (Views: 220.3ms | ActiveRecord: 16.9ms)
+
+
+Started GET "/requests" for ::1 at 2016-12-11 16:30:56 +0800
+Processing by RequestsController#index as HTML
+  Rendering requests/index.html.erb within layouts/application
+  [1m[36mTransaction Load (2.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."status" = $1[0m  [["status", "pending"]]
+  [1m[36mTraveller Load (0.5ms)[0m  [1m[34mSELECT  "travellers".* FROM "travellers" WHERE "travellers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered requests/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 234ms (Views: 227.7ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/requests" for ::1 at 2016-12-11 16:31:03 +0800
+Processing by RequestsController#index as HTML
+  Rendering requests/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."status" = $1[0m  [["status", "pending"]]
+  [1m[36mTraveller Load (0.2ms)[0m  [1m[34mSELECT  "travellers".* FROM "travellers" WHERE "travellers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered requests/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 67ms (Views: 65.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/requests" for ::1 at 2016-12-11 16:31:33 +0800
+Processing by RequestsController#index as HTML
+  Rendering requests/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."status" = $1[0m  [["status", "pending"]]
+  [1m[36mTraveller Load (0.2ms)[0m  [1m[34mSELECT  "travellers".* FROM "travellers" WHERE "travellers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered requests/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 84ms (Views: 81.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/requests" for ::1 at 2016-12-11 16:31:43 +0800
+Processing by RequestsController#index as HTML
+  Rendering requests/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."status" = $1[0m  [["status", "pending"]]
+  [1m[36mTraveller Load (0.2ms)[0m  [1m[34mSELECT  "travellers".* FROM "travellers" WHERE "travellers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered requests/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 68ms (Views: 65.4ms | ActiveRecord: 0.5ms)
+
+
