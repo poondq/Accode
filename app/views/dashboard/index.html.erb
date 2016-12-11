@@ -9,15 +9,15 @@
 	<br> <%= current_user.merchant_amount %> </h3></td>
   <td>
   <h3> Current Requests
-  <br> <%= Transaction.where(status: "").count %> </h3></td>
+  <br> <%= Transaction.where(status: "pending").count %> </h3></td>
   </tr>
   <tr>
   <td>
   <h3> Completed Transaction
-  <br> <%= Transaction.where(status: "").count %> </h3></td>
+  <br> <%= Transaction.where(status: "completed").count %> </h3></td>
   <td>
   <h3>Cancelled Transaction
-  <br> <%= Transaction.where(status: "").count %> </h3></td>
+  <br> <%= Transaction.where(status: "cancelled").count %> </h3></td>
   </tr>
     </table>
 
