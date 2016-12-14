@@ -1,11 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'completeapi/index'
-
-  get 'transactionapi/index'
-
-  get 'requests/index'
-
 	resources :dashboard, :profile, :setting, :transaction, :travellers, :cashbalance, :merchants, :requests, :transactionapi, :completeapi
 
   devise_for :users, :travellers

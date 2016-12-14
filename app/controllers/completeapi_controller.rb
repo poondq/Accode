@@ -1,15 +1,31 @@
 class CompleteapiController < ApplicationController
+  
   def index
-  	if params[:check_status].present? && params[:transref].present?
-  		transaction = Transaction.find_by(reference: params[:transref]).status
+			  	# if params[:transref].present?
+			  	# 	transaction = Transaction.find_by(reference: params[:transref])
+			  				  	
+			  	# else 
+			   #    transaction = Transaction.all
+			   #    # render json: { errors: transaction.errors.full_messages }, status: :unprocessible_entity
 
-  				  	render json: @user.to_json
-							end	
-  	else 
-  		notice: "failure"
-  	
-  	end
-  end
+			  	#  # notice: "failure"
+			  	# end		  
+
+			  	# render json: transaction.to_json	
+
+
+				  			if params[:transref].present?
+								@transaction = Transaction.where("reference = ?", params[:transref])
+								else
+								@transaction = Transaction.all
+								end		
+
+		  	render json: @transaction.to_json
+	end
+
+
+
+end
 
 
   # if params[:request_amount].present? || params[:request_zone].present?
@@ -54,4 +70,4 @@ class CompleteapiController < ApplicationController
   #     render json: { errors: transaction.errors.full_messages }, status: :unprocessible_entity
   #   end
   # end
-end
+

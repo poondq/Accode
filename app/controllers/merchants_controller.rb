@@ -11,8 +11,9 @@ class MerchantsController < ApplicationController
 		end
 
 	 def show
-	 		# render json: @user.to_json
+	 		 render json: @user.to_json
 
-	 	# render json: User.find(params[:id])
+	 	  	render json: User.find(params[:id])
 	 end
+
 end
