@@ -1,4 +1,48 @@
-<div class="container>
+<div class="container">
+  <div class="row">
+
+    <div class="col-xs-3"> 
+    <h1 align="center"> $<%= current_user.merchant_amount %></h1> <br>
+    <h4 align="center"> Current Cash Balance </h4>
+    </div>  
+
+    <div class="col-xs-3"> 
+    <h1 align="center"> $tobeaddedrubycode</h1> <br>
+    <h4 align="center"> <%= Transaction.where(status: "pending").count %> Pending Requests </h4>
+    </div> 
+
+    <div class="col-xs-3"> 
+    <h1 align="center"><%= Transaction.where(status: "completed").count %></h1> <br>
+    <h4 align="center"> Total Completed Orders </h4>
+    </div> 
+
+    <div class="col-xs-3"> 
+    <h1 align="center"> to be added total sum ruby code</h1> <br>
+    <h4 align="center"> Total Received </h4>
+    </div> 
+
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+     
+     <h3 align="center"> Completed Transaction Value</h3> <br>
+     <h5 align="center">X and Y cordinate graph </h5>
+
+    </div>  
+  
+  </div>
+
+</div>  
+
+
+
+
+
+
+
+
+<!-- old format <div class="container>
 <div class="row" align="center"> <h2> Today's Summary </h2></div>
 <br>
 	<div class="row" align="center">
@@ -22,5 +66,5 @@
     </table>
 
 	</div>
-</div>
+</div> -->
 
