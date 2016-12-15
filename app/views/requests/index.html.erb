@@ -1,68 +1,33 @@
-<div class="container>
-<div class="row" align="center"> <h2> CASH PICKUP REQUESTS </h2></div>
-
-	<div class="row">
-  <div class="col-xs-12 col-sm-12 col-lg-12" align="center">
-
-	<table>
-		<tr>
-			<th>Reference</th>
-			<th>Requestor</th>
-			<th>Amount(SGD)</th>
-			<th>Action</th>
-		</tr>
-		<tr>
-		<% @request.each do |t| %>
-			<td><%= t.transaction_id %><br><%= t.updated_at %></td>
-			<td><img src="<%= t.traveller.photo %>" style="width:50px;height:50px;"> <div><%= t.traveller.firstname %> <br> <%= t.traveller.email %></div></td>
-			<td><%= t.amount %></td>
-			<td><button type="button" data-toggle="modal" class="btn btn-info btn-sm" data-target="#complete">complete</button> <br> <button type="button" data-toggle="modal" class="btn btn-info btn-sm" data-target="#cancel">cancel</button></td>
-		</tr>
-		<%end %>
-	</table>	
-	</div>
-	</div>
-	</div>
-
-<!-- Modal -->
-<div id="complete" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">I have passed</h4>
-      </div>
-      <div class="modal-body">
-        <h2> </h2>
-
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
+<div class="container">
+  
+  <div class="row">
+    <div class="col-xs-12">
+      <h1>Requests</h1>
+      <h3>Cash Pickup Requests</h3>
     </div>
 
-  </div>
-</div>
+    <div class="col-xs-12">
+      <table>
+        <tr>
+          <th>Reference Number</th>
+          <th>Requestor</th>
+          <th>Amount (SGD)</th>
+        </tr>
 
-<!-- Modal -->
-<div id="cancel" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Modal cancel</h4>
-      </div>
-      <div class="modal-body">
-        <p>Some text in the modal.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
+        <% @transactions.each do |transaction| %>
+          <tr>
+            <td> <%= transaction.reference %> </td>
+            <td> 
+              <%= image_tag(transaction.traveller.photo.to_s) %>
+              <%= transaction.traveller.firstname %> 
+            </td>
+            <td> <%= transaction.amount %> </td>
+            <td> <%= link_to 'Complete', edit_request_path(id: transaction.id), remote: true %> </td>
+          </tr>
+        <% end %>
+      </table>    
     </div>
-
   </div>
+
+<!-- add render model -->
 </div>

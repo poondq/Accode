@@ -7,12 +7,12 @@
     </div>  
 
     <div class="col-xs-3"> 
-    <h1 align="center"> $tobeaddedrubycode</h1> <br>
-    <h4 align="center"> <%= Transaction.where(status: "pending").count %> Pending Requests </h4>
+    <h1 align="center"> <%= @transactions.count %></h1> <br>
+    <h4 align="center"> Pending Requests </h4>
     </div> 
 
     <div class="col-xs-3"> 
-    <h1 align="center"><%= Transaction.where(status: "completed").count %></h1> <br>
+    <h1 align="center"><%= Transaction.where(status: "pending").count %> </h1> <br>
     <h4 align="center"> Total Completed Orders </h4>
     </div> 
 

@@ -1,0 +1,2 @@
+# <%= form_for @complete, remote: true do |f| %>
+# <% end %>

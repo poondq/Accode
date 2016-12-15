@@ -5,7 +5,7 @@ class DashboardController < ApplicationController
 			
 		@user = User.all
 			@travellers = Traveller.all
-
-	
+   
+  @transactions = Transaction.select{ |transaction| transaction.created_at.to_date == Date.today}
 	end
 end
