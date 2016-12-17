@@ -14,23 +14,22 @@ class TransactionapiController < ApplicationController
    #                amount: params[:amount]
    #                selectedmerchant: params[:selectedmarchant]
 	# 								)
-
 		@traveller = Traveller.new(
-											firstname: params[:firstname],
-		                  lastname: params[:lastname],
-		                  email: params[:email],
-		                  number: params[:number],
+											firstname: params[:firstname]  ,
+		                  lastname: params[:lastname] ,
+		                  email: params[:email] ,
+		                  number: params[:number] ,
 		                  photo: params[:photo]
 		                  )
 		
 		@transaction = @traveller.transactions.build(
-											amount: params[:amount],
-			                selectedmerchant: params[:selectedmerchant],
-			                user: User.find(params[:merchant_id]),
-			                status: "pending"
-                      fee: ( params[:amount] / 10 * 0.50 )
-                      total4trans: ( params[:amount] / 10 * 0.50 + params[:amount] )
-										)
+											amount: params[:amount]  ,
+			                selectedmerchant: params[:selectedmerchant]  ,
+			                user: User.find(params[:merchant_id])  ,
+			                status: "pending"  ,
+                      fee: params[:amount].to_i / 10 * 0.50  ,
+                      total4trans: params[:amount].to_i / 10 * 0.50 + params[:amount].to_i
+                  	)
 		@traveller.save
 		# puts @traveller.errors.full_messages
 
