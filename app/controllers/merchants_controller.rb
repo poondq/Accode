@@ -33,30 +33,30 @@ end
 
 # if < ?, param[:request_amount] show. 
 
-	@users = User.where("merchant_amount > ?", params[:request_amount]) && User.where("merchant_zone = ?", params[:request_zone])
-	@amount = @users.map do |user|
-		Hash['id', user.id, 'amount', user.transactions.where(status: 'pending').sum(&:amount), 'user_amount', user.merchant_amount]
-	end
-	@updated_amount = @amount.map do |user|
-		Hash['id', user['id'], 'amount', user['amount'] + params[:request_amount], 'user_amount', user['user_amount']]
-	end
-	@eligible_users = @updated_amount.map do |hash|
-		User.find(hash['id']) if hash['amount'] >= hash['user_amount']
-	end.compact
+# 	@users = User.where("merchant_amount > ?", params[:request_amount]) && User.where("merchant_zone = ?", params[:request_zone])
+# 	@amount = @users.map do |user|
+# 		Hash['id', user.id, 'amount', user.transactions.where(status: 'pending').sum(&:amount), 'user_amount', user.merchant_amount]
+# 	end
+# 	@updated_amount = @amount.map do |user|
+# 		Hash['id', user['id'], 'amount', user['amount'] + params[:request_amount], 'user_amount', user['user_amount']]
+# 	end
+# 	@eligible_users = @updated_amount.map do |hash|
+# 		User.find(hash['id']) if hash['amount'] >= hash['user_amount']
+# 	end.compact
 
 
 
 
-	@merchants = Transaction.where(status: 'pending').map(&:user)
+# 	@merchants = Transaction.where(status: 'pending').map(&:user)
 
-	@user = User.where(transaction.status = "pending") 
-	@user.sum(&:amount) = current_user.where("merchant_amount > ?", params[:request_amount]) 
+# 	@user = User.where(transaction.status = "pending") 
+# 	# @user.sum(&:amount) = current_user.where("merchant_amount > ?", params[:request_amount]) 
 
-else 
+# else 
 
-	:notice "fuckkkkkk"
+# 	:notice "fuckkkkkk"
 
-else 
-	no show
+# else 
+# 	no show
 
 
