@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
 
-	resources :dashboard, :profile, :setting, :transaction, :travellers, :cashbalance, :merchants, :requests, :transactionapi, :completeapi
+	resources :dashboard, :profile, :setting, :transaction, :travellers, :cashbalance, :merchants, :transactionapi, :completeapi
+
+	resources :requests do
+		member do
+			patch :cancel
+			patch :complete
+		end
+	end
 
   devise_for :users, :travellers
 

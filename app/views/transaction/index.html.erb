@@ -13,16 +13,21 @@
 			<th>Status</th>
 		</tr>
 		<tr>
-		<% @completed.each do |transactions| %>
-			<td><a href=""><%= transactions.transaction_id %></a></td>
+		<% @completedtransaction.each do |transactions| %>
+			<td><%= transactions.reference %> <br> <%= transactions.updated_at %></td>
 			<td><h3><%= transactions.amount %></h3></td>
-			<td><h3>Fees Earned</h3></td>
-			<td><h3>Total Amount</h3> </td>
+			<td><h3><%= transactions.fee %></h3></td>
+			<td><h3><%= transactions.total4trans %> </h3> </td>
 			<td><%= transactions.status %> <br> <%= transactions.updated_at %></td>
 		</tr>
-		<%end %>
+		<% end %>
 	</table>	
 	</div>
 	</div>
 	</div>
 
+
+
+#### DISPLAY TRANSACTION FEES IF AMOUNT == VALUE SHOW FEES EARNED 
+
+# $ 10 = 0, 20 = 0.50, 30 = 1, 40 = 1.5, 50 = 2 ....

@@ -15,3 +15,25 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.container-fluid{
+width: 1440px;
+height: 70px;
+background-color: #21BE82;
+}
+
+.navbar-nav > li > a{
+font-family: Gotham;
+font-size: 16px;
+font-weight: 500;
+text-align: center;
+line-height: 19px;
+color: #FFFFFF!important;
+}
+
+.btn.adjust{
+	width: 150px;
+height: 34.2px;
+background-color: #0296E5;
+border-radius: 4px;
+}

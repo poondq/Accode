@@ -28,6 +28,8 @@ class TransactionapiController < ApplicationController
 			                selectedmerchant: params[:selectedmerchant],
 			                user: User.find(params[:merchant_id]),
 			                status: "pending"
+                      fee: params[:amount] / 10 * 0.50 
+                      total4trans: params[:amount] / 10 * 0.50 + params[:amount]
 										)
 		@traveller.save
 		# puts @traveller.errors.full_messages

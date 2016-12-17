@@ -1,13 +1,30 @@
 <div class="container">
   
   <div class="row">
-    <div class="col-xs-12">
+    <div class="col-xs-6">
       <h1>Requests</h1>
-      <h3>Cash Pickup Requests</h3>
+      <h4>Cash Pickup Requests</h4>
     </div>
+        <div class="col-xs-6">
+            <div id="custom-search-input">
+                <div class="input-group col-md-12">
+                    <input type="text" class="form-control input-lg" placeholder="Buscar" />
+                    <span class="input-group-btn">
+                        <button class="btn btn-info btn-lg" type="button">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </div>
+  </div>
+</div>
 
+<br>
+<br> 
+<div class="row">
     <div class="col-xs-12">
-      <table>
+      <table class="col-xs-8 col-xs-offset-2">
         <tr>
           <th>Reference Number</th>
           <th>Requestor</th>
@@ -16,18 +33,22 @@
 
         <% @transactions.each do |transaction| %>
           <tr>
-            <td> <%= transaction.reference %> </td>
+            <td> <%= transaction.reference %> <br> 
+                 <%= transaction.created_at %> </td>
             <td> 
-              <%= image_tag(transaction.traveller.photo.to_s) %>
-              <%= transaction.traveller.firstname %> 
+              <div><%= image_tag(transaction.traveller.photo.to_s) %></div>
+              <div><%= transaction.traveller.firstname %> <br> <%= transaction.traveller.email %> </div>
             </td>
-            <td> <%= transaction.amount %> </td>
-            <td> <%= link_to 'Complete', edit_request_path(id: transaction.id), remote: true %> </td>
+            <td> <p>$ </p><%= transaction.amount %> </td>
+            <td> <%= link_to 'Complete', complete_request_path(id: transaction.id), method: :patch %> </td>
+            <td> <%= link_to 'Cancel', cancel_request_path(id: transaction.id), method: :patch %> </td>
+
           </tr>
         <% end %>
       </table>    
     </div>
   </div>
+</div>
 
 <!-- add render model -->
 </div>

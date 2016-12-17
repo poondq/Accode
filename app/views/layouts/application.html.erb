@@ -2,32 +2,37 @@
 <html>
   <head>
     <title>Peerex3</title>
+    <%= javascript_include_tag "https://www.gstatic.com/charts/loader.js" %>
+
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-
-  <nav class="navbar navbar-default">
-    <div class="col-xs-3" align="left">
-    <a href="/">
-<img src="http://i.imgur.com/fnuxGKh.png" width="32" height="42"> </a> <h3> Peerex</h3>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+    <a class="navbar-brand" href="/"><img src="http://i.imgur.com/u6MZk1D.png"></a>
     </div>
 
-    <div class="col-xs-6">
-      <a href="/dashboard">Home</a>
-      <a href="/requests">Requests</a>
-      <a href="/transaction">Transactions</a>
-      <a href="/cashbalance">Cash Balance</a>
-      <a href="/setting">Settings</a>
-    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> -->
+      <form class="navbar-form navbar-left">
+      
+      <ul class="nav navbar-nav">
+      <li><a href="/dashboard">Home</a></li>  
+      <li><a href="/requests">Requests</a></li>
+      <li><a href="/transaction">Transactions</a></li>
+      <li><a href="/cashbalance">Cash Balance</a></li>
+      <li><a href="/setting">Settings</a></li>
+      <li><button type="button" id="adjust" class="btn btn-default btn-lg">Adjust Balance</button></li>
 
-    <div class="col-xs-3">
-      <span>| </span>
-      <button>Adjust Balance</button>
+      </ul>
+      </form>
+
     </div>
-  
-  </nav>
+    </nav>
 
   </head>
 
@@ -35,7 +40,17 @@
     <%= yield %> 
   </body>
 
-  
+  <div class="container">
+  <div class="row">
+  <hr>
+    <div class="col-xs-6">
+      <p class="muted pull-right">© 2016 Peerex. All rights reserved</p>
+      </div>
+      <div class="col-xs-6">
+      <a href="#">Privacy Policy</a> | <a href="#">Contact Us</a>  
+      </div>
+  </div>
+</div>
 
 </html>
 
