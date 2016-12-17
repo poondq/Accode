@@ -1,0 +1,5 @@
+// $("#topup-window").html("<%= escape_javascript(render 'popup/_topuppartial') %>");
+
+
+$("#topup-window").find(".modal-content").html("<%= j (render 'popup/topup') %>");
+$("#topup-window").modal();

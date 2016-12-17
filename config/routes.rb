@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-	resources :dashboard, :profile, :setting, :transaction, :travellers, :cashbalance, :merchants, :transactionapi, :completeapi
+	resources :dashboard, :profile, :setting, :transaction, :travellers, :cashbalance, :merchants, :transactionapi, :completeapi, :popup
 
 	resources :requests do
 		member do
@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 		end
 	end
 
+get "popup/topuppartial" => 'popup#topuppartial', :as => :topuppartial
   devise_for :users, :travellers
 
 

@@ -20,7 +20,9 @@ SETTING
  <%= f.label :merchant_status, "Status" %>	<br>
  <%= f.text_area :merchant_status %>	<br>
  <%= f.submit "Update" %>	<br>
- <%= link_to "Change your password", edit_user_registration_path %>
+ <%= link_to "Change your password", edit_user_registration_path %> <br>
+ <%= link_to('Log Out', destroy_user_session_path, :method => :delete) %>
+
 
 <% end %>
 
