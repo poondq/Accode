@@ -1,9 +1,8 @@
-<div class="container">
-  
+<div id="request-table" class="container">
   <div class="row">
     <div class="col-xs-6">
-      <h1>Requests</h1>
-      <h4>Cash Pickup Requests</h4>
+      <h1 id="request-text1">Requests</h1>
+      <h4 id="request-text2">Cash Pickup Requests</h4>
     </div>
         <div class="col-xs-6">
             <div id="custom-search-input">
@@ -18,36 +17,36 @@
             </div>
         </div>
   </div>
-</div>
 
 <br>
 <br> 
 <div class="row">
     <div class="col-xs-12">
-      <table class="col-xs-8 col-xs-offset-2">
-        <tr>
+      <table class="col-xs-12">
+        <tr id="table-header">
           <th>Reference Number</th>
           <th>Requestor</th>
           <th>Amount (SGD)</th>
         </tr>
 
         <% @transactions.each do |transaction| %>
-          <tr>
-            <td> <%= transaction.reference %> <br> 
-                 <%= transaction.created_at %> </td>
+          <tr id="table-row">
+            <td><p id="tr1"><%= transaction.reference %></p>
+                <p id="tr2"><%= transaction.created_at %></p>  </td>
             <td> 
-              <div><%= image_tag(transaction.traveller.photo.to_s) %></div>
-              <div><%= transaction.traveller.firstname %> <br> <%= transaction.traveller.email %> </div>
+              <div align="left"> <%= image_tag(transaction.traveller.photo.to_s, size: "51x51") %></div>
+              <div align="center"><p id="tr3"><%= transaction.traveller.firstname %></p> <p id="tr4"><%= transaction.traveller.email %></p>  </div>
             </td>
-            <td> <p>$ </p><%= transaction.amount %> </td>
-            <td> <%= link_to 'Complete', complete_request_path(id: transaction.id), method: :patch %> </td>
-            <td> <%= link_to 'Cancel', cancel_request_path(id: transaction.id), method: :patch %> </td>
+            <td> <p id="tr5"><%= number_to_currency(transaction.amount) %> </p> </td>
+            <td> <button id="trbtn1"><%= link_to 'Complete', complete_request_path(id: transaction.id), method: :patch %> </button> </td>
+            <td> <button id="trbtn2"><%= link_to 'Cancel', cancel_request_path(id: transaction.id), method: :patch %> </button> </td>
 
           </tr>
         <% end %>
       </table>    
     </div>
   </div>
+</div>
 </div>
 
 <!-- add render model -->

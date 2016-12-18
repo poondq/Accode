@@ -9,7 +9,6 @@ Rails.application.routes.draw do
 		end
 	end
 
-get "popup/topuppartial" => 'popup#topuppartial', :as => :topuppartial
   devise_for :users, :travellers
 
 

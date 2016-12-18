@@ -1,24 +1,27 @@
-<div class="container">
-<div class="row" align="center"> <h2> Past Transactions </h2></div>
+<div class="container transaction-container">
+<div class="row"> 
+
+	<h2 id="tx1">Transactions </h2></div>
+	<h3 id="tx2">All past transactions and export report </h3>
 
 	<div class="row">
   <div class="col-xs-12 col-sm-12 col-lg-12" align="center">
 
-	<table>
-		<tr>
-			<th>Reference</th>
-			<th>Amount Requested<br>(SGD)</th>
-			<th>Fees Earned<br>(SGD)</th>
-			<th>Total Receivables<br>(SGD)</th>
-			<th>Status</th>
+	<table class="col-xs-12">
+		<tr id="table-header">
+			<th><p id="tx3"></p> Reference</th>
+			<th><p id="tx3"></p>Amount Requested<br>(SGD)</th>
+			<th><p id="tx3"></p>Fees Earned<br>(SGD)</th>
+			<th><p id="tx3"></p>Total Receivables<br>(SGD)</th>
+			<th><p id="tx3"></p>Status</th>
 		</tr>
 		<tr>
 		<% @completedtransaction.each do |transactions| %>
-			<td><%= transactions.reference %> <br> <%= transactions.updated_at %></td>
-			<td><h3><%= transactions.amount %></h3></td>
-			<td><h3><%= transactions.fee %></h3></td>
-			<td><h3><%= transactions.total4trans %> </h3> </td>
-			<td><%= transactions.status %> <br> <%= transactions.updated_at %></td>
+			<td><p id="tx4"><%= transactions.reference %></p> </td>
+			<td><h3 id="tx5"><%= number_to_currency(transactions.amount) %></h3></td>
+			<td><h3 id="tx6">$<%= number_to_currency(transactions.fee) %></h3></td>
+			<td><h3 id="tx7">$<%= number_to_currency(transactions.total4trans) %> </h3> </td>
+			<td><p id="tx8"><%= transactions.status %></p>  <br> <p id="tx9"><%= transactions.updated_at %></p> </td>
 		</tr>
 		<% end %>
 	</table>	

@@ -1,0 +1,3 @@
+<% mailbox.conversations.each do |conversation| %>
+  conversation subject --- <%= link_to conversation.subject, conversation, remote: true %>
+<% end %>
