@@ -34,7 +34,7 @@ class TransactionapiController < ApplicationController
                       @step2 = @step0 - @step1 - params[:amount].to_i  ,
                       @step3 = @step2 * 0.9 ,
 
-                      total4trans: @step3 ,
+                      :total4trans => @step3 ,
                       token: params[:token] ,
                       fullamount: params[:fullamount]
                   	)
