@@ -19,8 +19,8 @@
 		<% @completedtransaction.each do |transactions| %>
 			<td><p id="tx4"><%= transactions.reference %></p> </td>
 			<td><h3 id="tx5"><%= number_to_currency(transactions.amount) %></h3></td>
-			<td><h3 id="tx6">$<%= number_to_currency(transactions.fee) %></h3></td>
-			<td><h3 id="tx7">$<%= number_to_currency(transactions.total4trans) %> </h3> </td>
+			<td><h3 id="tx6"><%= number_to_currency(transactions.fee) %></h3></td>
+			<td><h3 id="tx7"><%= number_to_currency(transactions.total4trans) %> </h3> </td>
 			<td><p id="tx8"><%= transactions.status %></p>  <br> <p id="tx9"><%= transactions.updated_at %></p> </td>
 		</tr>
 		<% end %>

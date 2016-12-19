@@ -1,0 +1,59 @@
+/.bundle
+/vendor/bundle/
+/vendor/assets/bower_components
+/vendor/ruby/
+
+/log/*
+/tmp/*
+!/log/.keep
+
+.byebug_history
+
+**.war
+*.rbc
+*.sassc
+.rspec
+.redcar/
+.sass-cache
+/config/config.yml
+/config/database.yml
+/public/cache
+/public/stylesheets/compiled
+/public/system/*
+/spec/tmp/*
+/app/assets/stylesheets/base/.bak/
+/app/assets/stylesheets/m.base/.bak/
+/app/assets/stylesheets/.bak/
+/cache
+/capybara*
+/capybara-*.html
+/gems
+/specifications
+rerun.txt
+pickle-email-*.html
+.zeus.sock
+
+# scm revert files
+**.orig
+
+# Mac finder artifacts
+.DS_Store
+
+# Textmate project files
+/*.tmproj
+
+# vim artifacts
+**.swp
+
+# Ignore application configuration
+/config/application.yml
+.env
+
+public/assets
+
+# NPM stuff
+/node_modules
+
+# Ignore RVM specific settings
+.ruby-gemset
+.ruby-version

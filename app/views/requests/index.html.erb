@@ -27,6 +27,7 @@
           <th>Reference Number</th>
           <th>Requestor</th>
           <th>Amount (SGD)</th>
+          <th></th>
         </tr>
 
         <% @transactions.each do |transaction| %>
@@ -34,7 +35,7 @@
             <td><p id="tr1"><%= transaction.reference %></p>
                 <p id="tr2"><%= transaction.created_at %></p>  </td>
             <td> 
-              <div align="left"> <%= image_tag(transaction.traveller.photo.to_s, size: "51x51") %></div>
+              <div align="left"> <%= image_tag(transaction.traveller.photo.to_s, size: "51x51", :class=> "img-circular") %></div>
               <div align="center"><p id="tr3"><%= transaction.traveller.firstname %></p> <p id="tr4"><%= transaction.traveller.email %></p>  </div>
             </td>
             <td> <p id="tr5"><%= number_to_currency(transaction.amount) %> </p> </td>

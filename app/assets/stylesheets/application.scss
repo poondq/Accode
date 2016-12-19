@@ -21,12 +21,15 @@ body{
   font-family: 'Montserrat', sans-serif;
 }
 
+h1, h2, h3, h4 { 
+font-family: "Hind";
+}
+
 #dash1 {
 	font-size: 32px;
 text-align: center;
 line-height: 39px;
 color: #00A76D;
-height: 39px;
 }
 
 #dash2 {
@@ -34,7 +37,6 @@ font-size: 32px;
 text-align: center;
 line-height: 39px;
 color: #F5A623;
-height: 39px;
 }
 
 #dash3 {
@@ -42,7 +44,6 @@ height: 39px;
 text-align: center;
 line-height: 39px;
 color: #00A76D;
-height: 39px;
 }
 
 #dash4 {
@@ -50,12 +51,9 @@ height: 39px;
 text-align: center;
 line-height: 39px;
 color: #0296E5;
-height: 39px;
 }
 
 .dashboard-button{
-	width: 105px;
-height: 17px;
 font-family: Hind;
 font-size: 14px;
 font-weight: 300;
@@ -74,7 +72,7 @@ border-radius: 10px;
 
 .dashboardclick {
 	font-family: Hind;
-	width: 270px;
+	width: 100%;
 height: 36px;
 background-color: #0296E5;
 }
@@ -90,16 +88,14 @@ color: #383838;
 }
 
 .dashboard-container { 
-width: 270px;
-height: 150px;
+width:23.5%;
+margin-left: 5px!important;
+margin-right: 5px!important;
 background-color: #FFFFFF;
 box-shadow: 0 0 5px 0 rgba(138,138,138,0.2);
 border-radius: 10px;
 
 }
-
-
-
 
 .container-fluid{
 width: 1440px;
@@ -332,4 +328,55 @@ font-weight: 300;
 line-height: 14px;
 color: #383838;
 
+}
+
+#footer {
+background-color: #48D2A0;
+height: 150px;
+z-index: -1;
+    
+}
+#footerimg {
+
+	background-image: url("http://i.imgur.com/OKUl3YV.png");
+  	background-repeat: repeat-x; 
+  	height: 150px;
+		opacity: 0.5;
+		z-index: 1; 
+}
+
+#footer-text-1 {
+font-family: Hind;
+color: #ffffff !important;
+font-size: 16px;
+font-weight: 300;
+line-height: 17px;
+color: #FFFFFF;
+z-index: 2;
+
+}
+
+#footer-text-2 {
+font-family: Hind;
+color: #ffffff !important;
+font-size: 16px;
+font-weight: 300;
+line-height: 17px;
+color: #FFFFFF;
+z-index: 2;
+
+}
+
+.padding80 {
+	padding-top: 80px;
+}
+
+.img-circular{
+ width: 50px;
+ height: 50px;
+ background-size: cover;
+ display: block;
+ border-radius: 20px;
+ -webkit-border-radius: 20px;
+ -moz-border-radius: 20px;
 }

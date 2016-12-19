@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161217045624) do
+ActiveRecord::Schema.define(version: 20161218140701) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,6 +30,8 @@ ActiveRecord::Schema.define(version: 20161217045624) do
     t.string   "selectedmerchant"
     t.string   "reference"
     t.integer  "total4trans"
+    t.string   "token"
+    t.integer  "fullamount"
   end
 
   create_table "travellers", force: :cascade do |t|
