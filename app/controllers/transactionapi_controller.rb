@@ -29,7 +29,7 @@ class TransactionapiController < ApplicationController
 			                status: "pending"  ,
                       fee: params[:amount].to_i / 10 * 0.50  ,
                       total4trans: params[:amount].to_i / 10 * 0.5 + params[:amount].to_i ,
-                      token: params[:token] ,
+                      # token: params[:token] ,
                       fullamount: params[:fullamount]
                   	)
 		@traveller.save
