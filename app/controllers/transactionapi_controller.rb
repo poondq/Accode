@@ -30,7 +30,7 @@ class TransactionapiController < ApplicationController
                       fee: params[:amount].to_i / 10 * 0.50  ,
                       total4trans: params[:amount].to_i / 10 * 0.5 + params[:amount].to_i ,
                       # token: params[:token] ,
-                      fullamount: params[:fullamount]
+                      # fullamount: params[:fullamount]
                   	)
 		@traveller.save
 		# puts @traveller.errors.full_messages
