@@ -332,15 +332,16 @@ color: #383838;
 
 #footer {
 background-color: #48D2A0;
-height: 150px;
+height: 100px;
 z-index: -1;
     
 }
 #footerimg {
-
+margin-top: 20px;
+padding-bottom: 20px;
 	background-image: url("http://i.imgur.com/OKUl3YV.png");
   	background-repeat: repeat-x; 
-  	height: 150px;
+  	height: 100px;
 		opacity: 0.5;
 		z-index: 1; 
 }
@@ -353,16 +354,18 @@ font-weight: 300;
 line-height: 17px;
 color: #FFFFFF;
 z-index: 2;
+opacity: 1;
+
 
 }
 
 #footer-text-2 {
 font-family: Hind;
-color: #ffffff !important;
 font-size: 16px;
 font-weight: 300;
 line-height: 17px;
 color: #FFFFFF;
+opacity: 1;
 z-index: 2;
 
 }
@@ -372,6 +375,7 @@ z-index: 2;
 }
 
 .img-circular{
+align: left;
  width: 50px;
  height: 50px;
  background-size: cover;
@@ -379,4 +383,13 @@ z-index: 2;
  border-radius: 20px;
  -webkit-border-radius: 20px;
  -moz-border-radius: 20px;
+}
+
+
+.navbutton {
+width: 150px;
+font-size: 16px;
+font-weight: 500;
+line-height: 19px;
+color: #FFFFFF;
 }
