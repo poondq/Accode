@@ -28,7 +28,13 @@ class TransactionapiController < ApplicationController
 			                user: User.find(params[:merchant_id])  ,
 			                status: "pending"  ,
                       fee: params[:amount].to_i / 10 * 0.50  ,
-                      total4trans: params[:amount].to_i / 10 * 0.50 + params[:amount].to_i ,
+
+                      @step0 = params[:amount].to_i * 0.09 ,
+                      @step1 = @step0 * 0.034 + 0.50  ,
+                      @step2 = @step0 - @step1 - params[:amount].to_i  ,
+                      @step3 = @step2 * 0.9 ,
+
+                      total4trans: @step3 ,
                       token: params[:token] ,
                       fullamount: params[:fullamount]
                   	)
