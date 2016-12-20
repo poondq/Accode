@@ -6,34 +6,30 @@ class RatingapiController < ApplicationController
 
   def create
 
-  	@transaction = Transaction.all
-
-
    		if params[:rating].present? || params[:transref].present?
-   				
-   				@transactions = Transaction.where("reference = ?", params[:transref]) 
-   				# @transactions.where("reference = ?", params[:transref])
+   				@transaction = Transaction.all
+   				@transactions = @transaction.where("reference = ?", params[:transref]) 
 					@rating = @transactions.update( 
 					rating: params[:rating] 
 					)					
 
-					@givenrate = @rating
+          #rating formula
+            rating0 = Transaction.all.where("user_id = ?", params[:merchant_id])
+            rating1 = rating0.sum(:rating)
+            @ratingavg = rating1 / rating0.count
+
+
+        @merchant_update = User.update(
+          merchant_rating: @ratingavg
+          )
+
+      
+
+			render json: {rating: @ratingavg }
+    	else
+      render json: { errors: @transaction.errors.full_messages }, status: :unprocessible_entity
 			end
-
-			 # if @transactions.valid? 
-			 # 	render json: {status: @transaction.status = "completed"}
-
-			 # end
-			# else
-			# 	render json: {status: @transaction.status = "completed" }
-
-			# end
- 	 		# if @rating.valid?
-     #   render json: {rating: @transaction.rating, status: @transaction.status = "pending"}
-     # 	else
-     #   render json: { errors: transaction.errors.full_messages }, status: :unprocessible_entity
-     # 	end
-
+		
 		end
 
 end

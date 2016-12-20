@@ -23,19 +23,20 @@ class TransactionapiController < ApplicationController
 		                  photo: params[:photo]
 		                  )
 
-                    @step0 = params[:amount].to_f * 1.09000  
-                    @step1 = @step0.to_f * 0.03400 
-                    @step2 = @step1.to_f + 0.50000  
+                    @step0 = params[:amount].to_f * 1.09000.to_f  
+                    @step1 = @step0.to_f * 0.03400.to_f 
+                    @step2 = @step1.to_f + 0.50000.to_f 
                     @step3 = @step0.to_f - @step2.to_f - params[:amount].to_f  
-                    @step4 = @step3.to_f * 0.90000
+                    @step4 = @step3.to_f * 0.90000.to_f
                     @sum = @step4.to_f
+
 
 		@transaction = @traveller.transactions.build(
 											amount: params[:amount]  ,
-			                user: User.find(params[:merchant_id])  ,
+                      user: User.find(params[:merchant_id])  ,
 			                status: "pending"  ,
                       fee: @sum.to_f ,
-                      total4trans: params[:amount].to_i / 10 * 0.5 + params[:amount].to_i #,
+                      total4trans: params[:amount].to_f + @sum.to_f #,
                       # token: params[:token] ,                     
                       # selectedmerchant: params[:selectedmerchant]  ,
                       # fullamount: params[:fullamount]
