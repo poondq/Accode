@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
-	resources :dashboard, :profile, :setting, :transaction, :travellers, :cashbalance, :merchants, :transactionapi, :completeapi, :popup
+  get 'ratingapi/index'
+
+	resources :dashboard, :profile, :setting, :transaction, :travellers, :cashbalance, :merchants, :transactionapi, :completeapi, :popup, :ratingapi
 
 	resources :requests do
 		member do

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161218140701) do
+ActiveRecord::Schema.define(version: 20161220041834) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 20161218140701) do
     t.integer  "total4trans"
     t.string   "token"
     t.integer  "fullamount"
+    t.float    "rating"
   end
 
   create_table "travellers", force: :cascade do |t|
