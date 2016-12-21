@@ -24,22 +24,22 @@
     <div class="col-xs-12">
       <table class="maxwidth">
         <tr id="table-header">
-          <th>Reference Number</th>
+          <th id="alignleft">Reference Number</th>
           <th>Requestor</th>
-          <th>Amount (SGD)</th>
-          <th>Action</th>
+          <th id="alignleft">Amount (SGD)</th>
+          <th id="alignleft"></th>
         </tr>
 
         <% @transactions.each do |transaction| %>
           <tr id="table-row">
-            <td><p id="tr1" align="center"><%= transaction.reference %></p>
-                <p id="tr2"><%= transaction.created_at %></p>  </td>
-            <td> 
+            <td id="alignleft"><span id="tr1"><%= transaction.reference %></span> <br>
+                <span id="tr2"><%= transaction.created_at %></span>  </td>
+            <td id="alignleft"> 
               <div class="col-xs-1 col-xs-offset-3"> <%= image_tag(transaction.traveller.photo.to_s, size: "51x51", :class=> "img-circular") %></div>
               <div class="col-xs-1 col-xs-offset-1"><span id="tr3"><%= transaction.traveller.firstname %></span> <span id="tr4"><%= transaction.traveller.email %></span>  </div>
             </td>
-            <td> <p id="tr5"><%= number_to_currency(transaction.amount) %> </p> </td>
-            <td> 
+            <td id="alignleft"> <p id="tr5"><%= number_to_currency(transaction.amount) %> </p> </td>
+            <td id="alignleft"> 
             <button class="btn btn-success btn-large">
             <%= link_to 'Complete', complete_request_path(id: transaction.id), method: :patch , :class => 'reqcomplete'%> </button>  
 
