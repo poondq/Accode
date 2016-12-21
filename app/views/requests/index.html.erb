@@ -7,7 +7,7 @@
         <div class="col-xs-6">
             <div id="custom-search-input">
                 <div class="input-group col-md-12">
-                    <input type="text" class="form-control input-lg" placeholder="Buscar" />
+                    <input type="text" class="form-control input-lg" placeholder="Search" />
                     <span class="input-group-btn">
                         <button class="btn btn-info btn-lg" type="button">
                             <i class="glyphicon glyphicon-search"></i>
@@ -22,12 +22,12 @@
 <br> 
 <div class="row">
     <div class="col-xs-12">
-      <table class="col-xs-12">
+      <table class="maxwidth">
         <tr id="table-header">
           <th>Reference Number</th>
           <th>Requestor</th>
           <th>Amount (SGD)</th>
-          <th></th>
+          <th>Action</th>
         </tr>
 
         <% @transactions.each do |transaction| %>
@@ -39,9 +39,9 @@
               <p id="tr3"><%= transaction.traveller.firstname %></p> <p id="tr4"><%= transaction.traveller.email %></p>  </div>
             </td>
             <td> <p id="tr5"><%= number_to_currency(transaction.amount) %> </p> </td>
-            <td> <button id="trbtn1"><%= link_to 'Complete', complete_request_path(id: transaction.id), method: :patch %> </button> </td>
-            <td> <button id="trbtn2"><%= link_to 'Cancel', cancel_request_path(id: transaction.id), method: :patch %> </button> </td>
-
+            <td> <button id="trbtn1"><%= link_to 'Complete', complete_request_path(id: transaction.id), method: :patch %> </button>  <button id="trbtn2"><%= link_to 'Cancel', cancel_request_path(id: transaction.id), method: :patch %> </button> 
+            </td>
+           
           </tr>
         <% end %>
       </table>    

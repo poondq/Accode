@@ -15,13 +15,14 @@ class RatingapiController < ApplicationController
 
           #rating formula
             rating0 = Transaction.all.where("user_id = ?", params[:merchant_id])
-            rating1 = rating0.sum(:rating)
-            @ratingavg = rating1 / rating0.count
+            rating1 = rating0.sum(:rating).to_f
+            @ratingavg = rating1.to_f / rating0.count
 
 
-        @merchant_update = User.update(
-          merchant_rating: @ratingavg
+        @merchant_update = User.find(params[:merchant_id]).update(
+       merchant_rating: @ratingavg.to_f
           )
+
 
       
 
