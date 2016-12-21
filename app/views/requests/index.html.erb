@@ -32,14 +32,19 @@
 
         <% @transactions.each do |transaction| %>
           <tr id="table-row">
-            <td><p id="tr1"><%= transaction.reference %></p>
+            <td><p id="tr1" align="center"><%= transaction.reference %></p>
                 <p id="tr2"><%= transaction.created_at %></p>  </td>
             <td> 
-              <div> <%= image_tag(transaction.traveller.photo.to_s, size: "51x51", :class=> "img-circular") %>
-              <p id="tr3"><%= transaction.traveller.firstname %></p> <p id="tr4"><%= transaction.traveller.email %></p>  </div>
+              <div class="col-xs-1 col-xs-offset-3"> <%= image_tag(transaction.traveller.photo.to_s, size: "51x51", :class=> "img-circular") %></div>
+              <div class="col-xs-1 col-xs-offset-1"><span id="tr3"><%= transaction.traveller.firstname %></span> <span id="tr4"><%= transaction.traveller.email %></span>  </div>
             </td>
             <td> <p id="tr5"><%= number_to_currency(transaction.amount) %> </p> </td>
-            <td> <button id="trbtn1"><%= link_to 'Complete', complete_request_path(id: transaction.id), method: :patch %> </button>  <button id="trbtn2"><%= link_to 'Cancel', cancel_request_path(id: transaction.id), method: :patch %> </button> 
+            <td> 
+            <button class="btn btn-success btn-large">
+            <%= link_to 'Complete', complete_request_path(id: transaction.id), method: :patch , :class => 'reqcomplete'%> </button>  
+
+            <button class="btn btn-trans btn-large">
+            <%= link_to 'Cancel', cancel_request_path(id: transaction.id), method: :patch, :class => 'reqcancel' %> </button> 
             </td>
            
           </tr>

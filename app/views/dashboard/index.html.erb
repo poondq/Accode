@@ -4,26 +4,27 @@
     <div class="col-xs-3 dashboard-container"> 
     <h1 id="dash1" align="center"> <%= number_to_currency(current_user.merchant_amount) %></h1>
     <h4 class="dashsub" align="center"> Current Cash Balance </h4>
-    <button class="dashboardclick"> <span class="dashboard-button">Adjust Balance</span></button>
-
+    <a href="/setting" class="dashboard-button"><button class="dashboardclick">Adjust Balance</button></a>
+    
     </div>  
+
 
     <div class="col-xs-3 dashboard-container"> 
     <h1 id="dash2" align="center"> <%= number_to_currency(@pendingsum) %> </h1>
     <h4  class="dashsub" align="center"> <%= @pending.count %> Total Pending Requests </h4>
-    <button class="dashboardclick"> <span class="dashboard-button">Manage Requests</span> </button>
+     <a href="/requests" class="dashboard-button"><button class="dashboardclick">Manage Requests</button></a>
     </div> 
 
     <div class="col-xs-3 dashboard-container"> 
     <h1 id="dash3" align="center"><%= @todaycomplete %> </h1>
     <h4  class="dashsub" align="center"> Today Completed Orders </h4>
-    <button class="dashboardclick"> <span class="dashboard-button">Check Transactions</span></button>
+    <a href="/transaction" class="dashboard-button"><button class="dashboardclick">Check Transaction</button></a>
     </div> 
  
     <div class="col-xs-3 dashboard-container"> 
     <h1 id="dash4" align="center"> <%= number_to_currency(@completedsum) %></h1>
     <h4 class="dashsub" align="center"> Total Received </h4>
-    <button class="dashboardclick"> <span class="dashboard-button">Check History</span></button>
+    <a href="/cashbalance" class="dashboard-button"><button class="dashboardclick">Check History</button></a>
     </div> 
 
   </div>
